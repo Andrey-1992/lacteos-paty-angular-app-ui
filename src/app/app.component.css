@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+  /* background-color: whitesmoke; */
+}
+
+body {
+  background: linear-gradient(228deg, #2b0805fe,#26021b,#0d1e32,#34a9d3);
+	background-size: 400% 400%;
+	animation: gradient 60s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 500%;
+  color: whitesmoke;
+  margin: 3%;
+}
