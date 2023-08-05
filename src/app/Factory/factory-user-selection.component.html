@@ -1,14 +1,19 @@
 <div ngClass="fabrica">
-  <!-- <NavLink to="/go-fad-sign-admin-in"> -->
-    <p ngClass='go-fad-admin-sign-in'>Usuario: Administacion</p>  
-  <!-- </NavLink>  -->
-  <!-- <NavLink to="/go-prod-sign-admin-in"> -->
-    <p ngClass='go-fad-prod-sign-in'>Usuario: Produccion</p>
-  <!-- </NavLink> -->
-  <!-- <NavLink to="/go-prod-sign-dir-in"> -->
-    <p ngClass='go-fad-prod-sign-in'>Usuario: Directivo</p>
-  <!-- </NavLink> -->
-  <!-- <NavLink to="/"> -->
-    <p ngClass='go-back-fad-dis-menu'>Menu Inicial</p>
-  <!-- </NavLink> -->
+  <ul>
+    <li ngClass='go-fad-admin-sign-in'>
+      <a routerLink=''>Usuario: Administacion</a>  
+    </li>
+    <li ngClass='go-fad-prod-sign-in'>
+      <a routerLink=''>Usuario: Produccion</a>  
+    </li>
+    <li ngClass='go-fad-prod-sign-in'>
+      <a routerLink=''>Usuario: Directivo</a>  
+    </li>
+    <li ngClass='go-back-fad-dis-menu'>
+      <a routerLink='/production-vs-factory'>Usuario: Directivo</a>  
+    </li>
+      <!-- <a ngClass='go-fad-prod-sign-in'>Usuario: Produccion</a>
+      <a ngClass='go-fad-prod-sign-in'>Usuario: Directivo</a>
+      <a ngClass='go-back-fad-dis-menu'>Menu Inicial<a> -->
+  </ul>
 </div>
