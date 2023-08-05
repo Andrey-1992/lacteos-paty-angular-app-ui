@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-factory-user-selection',
-  templateUrl: './factory-user-selection.component.html',
-  styleUrls: ['./factory-user-selection.component.css']
+  selector: 'app-factory-admin-login',
+  templateUrl: './factory-admin-login.component.html',
+  styleUrls: ['./factory-admin-login.component.css']
 })
-export class FactoryUserSelection {
+export class FactoryAdminLogin {
 
 }
