@@ -4,7 +4,7 @@ import { FactoryUserSelection } from "./Factory/factory-user-selection.component
 import { ProductionVsFactoryComponent } from "./production-vs-factory/production-vs-factory.component";
 
 const appRoutes: Routes = [
-  {path: '', redirectTo: '/production-vs-factory'},
+  {path:'', redirectTo: '/production-vs-factory', pathMatch:'full'},
   {path: 'production-vs-factory', component: ProductionVsFactoryComponent},
   {path: 'factory-user-selection', component: FactoryUserSelection}
 ];
@@ -15,5 +15,3 @@ const appRoutes: Routes = [
 export class AppRoutingFactoryModule {
 
 }
-// ProductionVsFactoryComponent,
-// FactoryUserSelection
