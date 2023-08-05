@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { Routes } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
 import { FactoryUserSelection } from "./Factory/factory-user-selection.component";
 import { ProductionVsFactoryComponent } from "./production-vs-factory/production-vs-factory.component";
 
@@ -9,7 +9,8 @@ const appRoutes: Routes = [
   {path: 'factory-user-selection', component: FactoryUserSelection}
 ];
 @NgModule({
-
+  imports: [RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule]
 })
 export class AppRoutingFactoryModule {
 
