@@ -13,7 +13,7 @@ export class ProductionVsFactoryComponent implements OnInit {
     this.dynamicMenus = [
       {
         textToDisplay: 'Fabrica', 
-        urlLink: '',
+        urlLink: '/factory-user-selection',
         cssClass: ''
       },
       {
