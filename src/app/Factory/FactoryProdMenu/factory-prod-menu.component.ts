@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./factory-prod-menu.component.css']
 })
 export class FactoryProdMenu {
-
+  cheeseUrl: string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU"
 }
