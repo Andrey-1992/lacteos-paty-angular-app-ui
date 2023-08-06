@@ -1,14 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
-/* body {
+body {
+	text-align: center;
+  background: linear-gradient(228deg, #180403fe,#210117,#0e2239,#095571);
+	background-size: 400% 400%;
+	animation: gradient 60s ease infinite;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	/* height: 100vh; */
+  /* min-width: 100%; */
+  /* width: 100%; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

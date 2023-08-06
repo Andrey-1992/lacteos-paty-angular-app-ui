@@ -1,13 +1,19 @@
-.App {
-  text-align: center;
-  /* background-color: whitesmoke; */
-}
+/* * {
+	padding: 0;
+	margin: 0;
+} */
 
-body {
-  background: linear-gradient(228deg, #2b0805fe,#26021b,#0d1e32,#34a9d3);
+/* body {
+	text-align: center;
+  background: linear-gradient(228deg, #180403fe,#210117,#0e2239,#095571);
 	background-size: 400% 400%;
 	animation: gradient 60s ease infinite;
+
+  min-width: 100%;
 	height: 100vh;
+  width: 100%;
+  float:right;
+  display: block;
 }
 
 @keyframes gradient {
@@ -20,11 +26,4 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
-}
-
-h1 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 500%;
-  color: whitesmoke;
-  margin: 3%;
-}
+} */
