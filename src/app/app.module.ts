@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingFactoryModule } from './app-routing-factory.module';
 
 import { AppComponent } from './app.component';
+import { FactoryAdminMenu } from './Factory/factory-admin-menu.component';
 import { FactoryUserSelection } from './Factory/factory-user-selection.component';
 import { FactoryAdminLogin } from './Factory/FactoryAdmin/factory-admin-login.component';
-import { FactoryAdminMenu } from './Factory/FactoryAdmin/factory-admin-menu.component';
+import { FactoryProdMenu } from './Factory/FactoryProdMenu/factory-prod-menu.component';
 import { ProductionVsFactoryComponent } from './production-vs-factory/production-vs-factory.component';
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ProductionVsFactoryComponent } from './production-vs-factory/production
     ProductionVsFactoryComponent,
     FactoryUserSelection,
     FactoryAdminLogin,
-    FactoryAdminMenu
+    FactoryAdminMenu,
+    FactoryProdMenu
   ],
   imports: [
     BrowserModule,

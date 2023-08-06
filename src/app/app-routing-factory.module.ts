@@ -1,8 +1,9 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { FactoryAdminMenu } from "./Factory/factory-admin-menu.component";
 import { FactoryUserSelection } from "./Factory/factory-user-selection.component";
 import { FactoryAdminLogin } from "./Factory/FactoryAdmin/factory-admin-login.component";
-import { FactoryAdminMenu } from "./Factory/FactoryAdmin/factory-admin-menu.component";
+import { FactoryProdMenu } from "./Factory/FactoryProdMenu/factory-prod-menu.component";
 import { ProductionVsFactoryComponent } from "./production-vs-factory/production-vs-factory.component";
 
 const appRoutes: Routes = [
@@ -10,11 +11,13 @@ const appRoutes: Routes = [
   {path: 'production-vs-factory', component: ProductionVsFactoryComponent},
   {path: 'factory-user-selection', component: FactoryUserSelection},
   {path: 'factory-admin-login', component: FactoryAdminLogin},
-  {path: 'factory-admin', component: FactoryAdminMenu}
+  {path: 'factory-menu', component: FactoryAdminMenu},
+  {path: 'factory-prod', component: FactoryProdMenu}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingFactoryModule {};
-// FactoryAdminMenu
+// FactoryProdMenu
+
