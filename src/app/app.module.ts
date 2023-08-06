@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingFactoryModule } from './app-routing-factory.module';
 
 import { AppComponent } from './app.component';
-import { FactoryAdminMenu } from './Factory/factory-admin-menu.component';
+import { FactoryMenu } from './Factory/factory-admin-menu.component';
 import { FactoryUserSelection } from './Factory/factory-user-selection.component';
 import { FactoryAdminLogin } from './Factory/FactoryAdmin/factory-admin-login.component';
 import { FactoryProdInputsMenu } from './Factory/FactoryProdInputs/factory-prod-inputs-menu.component';
@@ -19,7 +19,7 @@ import { ProductionVsFactoryComponent } from './production-vs-factory/production
     FactoryDynamicMenus,
     FactoryUserSelection,
     FactoryAdminLogin,
-    FactoryAdminMenu,
+    FactoryMenu,
     FactoryProdMenu,
     FactoryProdInputsMenu,
     FactoryProdOutputsMenu

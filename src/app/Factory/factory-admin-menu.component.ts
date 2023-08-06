@@ -12,7 +12,7 @@ import { FactoryDynamicMenusModel } from '../Factory/FactoryShared/factory-dynam
     ></app-factory-dynamic-menus>
   `
 })
-export class FactoryAdminMenu {
+export class FactoryMenu {
   dynamicMenus: FactoryDynamicMenusModel[];
   menuBtnText = "Menu Anterior";
   menuBtnUrl = "/factory-user-selection";

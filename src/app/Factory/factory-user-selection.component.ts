@@ -33,31 +33,3 @@ export class FactoryUserSelection implements OnInit{
     ]
   }
 }
-
-// @Component({
-//   selector: 'app-production-vs-factory',
-//   template: 
-//   `<app-factory-dynamic-menus 
-//       *ngFor="let menu of dynamicMenus"
-//       [childMenu]="menu" 
-//       [childMenuBtn]=false
-//     ></app-factory-dynamic-menus>`
-// })
-// export class ProductionVsFactoryComponent implements OnInit {
-//   dynamicMenus: FactoryDynamicMenusModel[];
-
-//   ngOnInit(): void {
-//     this.dynamicMenus = [
-//       {
-//         textToDisplay: 'Fabrica', 
-//         urlLink: '/factory-user-selection',
-//         cssClass: ''
-//       },
-//       {
-//         textToDisplay: 'Distribucion', 
-//         urlLink: '',
-//         cssClass: ''
-//       }
-//     ]
-//   }
-// }

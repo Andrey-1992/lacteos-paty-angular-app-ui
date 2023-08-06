@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { FactoryAdminMenu } from "./Factory/factory-admin-menu.component";
+import { FactoryMenu } from "./Factory/factory-admin-menu.component";
 import { FactoryUserSelection } from "./Factory/factory-user-selection.component";
 import { FactoryAdminLogin } from "./Factory/FactoryAdmin/factory-admin-login.component";
 import { FactoryProdInputsMenu } from "./Factory/FactoryProdInputs/factory-prod-inputs-menu.component";
@@ -13,7 +13,7 @@ const appRoutes: Routes = [
   {path: 'production-vs-factory', component: ProductionVsFactoryComponent},
   {path: 'factory-user-selection', component: FactoryUserSelection},
   {path: 'factory-admin-login', component: FactoryAdminLogin},
-  {path: 'factory-menu', component: FactoryAdminMenu},
+  {path: 'factory-menu', component: FactoryMenu},
   {path: 'factory-prod', component: FactoryProdMenu},
   {path: 'factory-prod-inputs-menu', component: FactoryProdInputsMenu},
   {path: 'factory-prod-outputs-menu', component: FactoryProdOutputsMenu}
