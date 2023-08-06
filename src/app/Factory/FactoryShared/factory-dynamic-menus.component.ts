@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FactoryDynamicMenusModel } from './factory-dynamic-menus.model';
 
 @Component({
@@ -7,5 +7,9 @@ import { FactoryDynamicMenusModel } from './factory-dynamic-menus.model';
   styleUrls: ['./factory-dynamic-menus.component.css']
 })
 export class FactoryDynamicMenus {
-  private dynamicMenus: FactoryDynamicMenusModel[];
+  // private dynamicMenus: FactoryDynamicMenusModel[];
+  // constructor(dynamicMenus: FactoryDynamicMenusModel[]) {
+
+  // }
+  @Input('childMenu') dynamicMenu: FactoryDynamicMenusModel;
 }

@@ -6,4 +6,7 @@
     <a routerLinkActive="active" routerLink='/factory-user-selection'>Fabrica</a> 
   </div>
 </section> -->
-<app-factory-dynamic-menus></app-factory-dynamic-menus>
+<app-factory-dynamic-menus 
+  *ngFor="let menu of dynamicMenus"
+  [childMenu]="menu" 
+></app-factory-dynamic-menus>
