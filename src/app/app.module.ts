@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FactoryAdminMenu } from './Factory/factory-admin-menu.component';
 import { FactoryUserSelection } from './Factory/factory-user-selection.component';
 import { FactoryAdminLogin } from './Factory/FactoryAdmin/factory-admin-login.component';
+import { FactoryProdInputsMenu } from './Factory/FactoryProdInputs/factory-prod-inputs-menu.component';
 import { FactoryProdMenu } from './Factory/FactoryProdMenu/factory-prod-menu.component';
 import { ProductionVsFactoryComponent } from './production-vs-factory/production-vs-factory.component';
 
@@ -16,7 +17,8 @@ import { ProductionVsFactoryComponent } from './production-vs-factory/production
     FactoryUserSelection,
     FactoryAdminLogin,
     FactoryAdminMenu,
-    FactoryProdMenu
+    FactoryProdMenu,
+    FactoryProdInputsMenu
   ],
   imports: [
     BrowserModule,
