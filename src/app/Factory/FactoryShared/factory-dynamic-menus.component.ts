@@ -9,4 +9,6 @@ import { FactoryDynamicMenusModel } from './factory-dynamic-menus.model';
 export class FactoryDynamicMenus {
   @Input('childMenu') dynamicMenu: FactoryDynamicMenusModel;
   @Input('childMenuBtn') menuBtn: boolean;
+  @Input('childMenuBtnText') menuBtnText?: string;
+  @Input('childMenuBtnUrl') menuBtnUrl?: string;
 }

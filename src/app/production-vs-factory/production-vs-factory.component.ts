@@ -18,12 +18,10 @@ export class ProductionVsFactoryComponent implements OnInit {
       {
         textToDisplay: 'Fabrica', 
         urlLink: '/factory-user-selection',
-        cssClass: ''
       },
       {
         textToDisplay: 'Distribucion', 
-        urlLink: '',
-        cssClass: ''
+        urlLink: ''
       }
     ]
   }
