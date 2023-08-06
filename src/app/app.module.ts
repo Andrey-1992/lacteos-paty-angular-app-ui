@@ -8,6 +8,7 @@ import { FactoryUserSelection } from './Factory/factory-user-selection.component
 import { FactoryAdminLogin } from './Factory/FactoryAdmin/factory-admin-login.component';
 import { FactoryProdInputsMenu } from './Factory/FactoryProdInputs/factory-prod-inputs-menu.component';
 import { FactoryProdMenu } from './Factory/FactoryProdMenu/factory-prod-menu.component';
+import { FactoryProdOutputsMenu } from './Factory/FactoryProdOutputs/factory-prod-outputs-menu.component';
 import { ProductionVsFactoryComponent } from './production-vs-factory/production-vs-factory.component';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ProductionVsFactoryComponent } from './production-vs-factory/production
     FactoryAdminLogin,
     FactoryAdminMenu,
     FactoryProdMenu,
-    FactoryProdInputsMenu
+    FactoryProdInputsMenu,
+    FactoryProdOutputsMenu
   ],
   imports: [
     BrowserModule,
