@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FactoryDynamicMenusModel } from './factory-dynamic-menus.model';
 
 @Component({
   selector: 'app-factory-dynamic-menus',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./factory-dynamic-menus.component.css']
 })
 export class FactoryDynamicMenus {
-
+  private dynamicMenus: FactoryDynamicMenusModel[];
 }
