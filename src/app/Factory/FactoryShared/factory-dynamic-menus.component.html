@@ -1,4 +1,4 @@
-<section ngClass="fabVsProd">
+<section *ngIf="!menuBtn" ngClass="fabVsProd">
   <div ngClass='go-distribucion-main-menu'>
     <a routerLinkActive="active" routerLink={{dynamicMenu.urlLink}}>{{dynamicMenu.textToDisplay}}</a> 
   </div>
