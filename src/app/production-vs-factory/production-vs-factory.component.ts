@@ -3,8 +3,12 @@ import { FactoryDynamicMenusModel } from '../Factory/FactoryShared/factory-dynam
 
 @Component({
   selector: 'app-production-vs-factory',
-  templateUrl: './production-vs-factory.component.html',
-  styleUrls: ['./production-vs-factory.component.css']
+  template: 
+  `<app-factory-dynamic-menus 
+      *ngFor="let menu of dynamicMenus"
+      [childMenu]="menu" 
+      [childMenuBtn]=false
+    ></app-factory-dynamic-menus>`
 })
 export class ProductionVsFactoryComponent implements OnInit {
   dynamicMenus: FactoryDynamicMenusModel[];
@@ -23,5 +27,4 @@ export class ProductionVsFactoryComponent implements OnInit {
       }
     ]
   }
-
 }
