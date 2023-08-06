@@ -5,8 +5,7 @@ import { FactoryDynamicMenusModel } from '../Factory/FactoryShared/factory-dynam
   selector: 'app-production-vs-factory',
   template: 
   `<app-factory-dynamic-menus 
-      *ngFor="let menu of dynamicMenus"
-      [childMenu]="menu" 
+      [childMenus]="dynamicMenus" 
       [childMenuBtn]=false
     ></app-factory-dynamic-menus>`
 })

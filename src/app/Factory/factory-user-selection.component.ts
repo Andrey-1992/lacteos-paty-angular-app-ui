@@ -3,14 +3,18 @@ import { FactoryDynamicMenusModel } from '../Factory/FactoryShared/factory-dynam
 @Component({
   selector: 'app-factory-user-selection',
   template: 
-  `<app-factory-dynamic-menus 
-      *ngFor="let menu of dynamicMenus"
-      [childMenu]="menu" 
+  ` <app-factory-dynamic-menus 
+      [childMenus]="dynamicMenus" 
       [childMenuBtn]=true
-    ></app-factory-dynamic-menus>`
+      [childMenuBtnText]="menuBtnText"
+      [childMenuBtnUrl]="menuBtnUrl"
+    ></app-factory-dynamic-menus>
+  `
 })
 export class FactoryUserSelection implements OnInit{
   dynamicMenus: FactoryDynamicMenusModel[];
+  menuBtnText = "Menu Anterior";
+  menuBtnUrl = "/production-vs-factory";
 
   ngOnInit(): void {
     this.dynamicMenus = [

@@ -7,7 +7,7 @@ import { FactoryDynamicMenusModel } from './factory-dynamic-menus.model';
   styleUrls: ['./factory-dynamic-menus.component.css']
 })
 export class FactoryDynamicMenus {
-  @Input('childMenu') dynamicMenu: FactoryDynamicMenusModel;
+  @Input('childMenus') dynamicMenus: FactoryDynamicMenusModel[];
   @Input('childMenuBtn') menuBtn: boolean;
   @Input('childMenuBtnText') menuBtnText?: string;
   @Input('childMenuBtnUrl') menuBtnUrl?: string;

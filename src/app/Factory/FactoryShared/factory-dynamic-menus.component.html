@@ -1,13 +1,12 @@
 <section *ngIf="!menuBtn" ngClass="fab-vs-prod">
-  <div ngClass="fab-vs-prod-menus">
-    <a routerLinkActive="active" routerLink={{dynamicMenu.urlLink}}>{{dynamicMenu.textToDisplay}}</a> 
+  <div *ngFor="let menu of dynamicMenus" ngClass="fab-vs-prod-menus">
+    <a routerLinkActive="active" routerLink={{menu.urlLink}}>{{menu.textToDisplay}}</a> 
   </div>
 </section>
-<!-- <section *ngIf="!menuBtn" ngClass="fab-vs-prod">
-  <div ngClass="fab-vs-prod-menus">
-    <a routerLinkActive="active" routerLink={{dynamicMenu.urlLink}}>{{dynamicMenu.textToDisplay}}</a> 
+<!-- Section for Menus with Button to go back in previous version -->
+<section *ngIf="menuBtn" ngClass="fab-vs-prod">
+  <div *ngFor="let menu of dynamicMenus" ngClass="fab-vs-prod-menus">
+    <a routerLinkActive="active" routerLink={{menu.urlLink}}>{{menu.textToDisplay}}</a>
   </div>
-</section> -->
-<section *ngIf="menuBtn">
-  <h1>TEEEE</h1>
+  <a ngClass="fab-vs-prod-menus" routerLinkActive="active" routerLink={{menuBtnUrl}}>{{menuBtnText}}</a>
 </section>
