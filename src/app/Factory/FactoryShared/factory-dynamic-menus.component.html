@@ -5,8 +5,11 @@
 </section>
 <!-- Section for Menus with Button to go back in previous version -->
 <section *ngIf="menuBtn" ngClass="fab-vs-prod">
-  <div *ngFor="let menu of dynamicMenus" ngClass="fab-vs-prod-menus">
+  <div *ngFor="let menu of dynamicMenus" ngClass="fab-vs-prod-menus-with-btn">
     <a routerLinkActive="active" routerLink={{menu.urlLink}}>{{menu.textToDisplay}}</a>
   </div>
-  <a ngClass="fab-vs-prod-menus" routerLinkActive="active" routerLink={{menuBtnUrl}}>{{menuBtnText}}</a>
+  <br>
+  <br>
+  <br>
+    <a ngClass="fab-vs-prod-menus-go-back-btn" routerLinkActive="active" routerLink={{menuBtnUrl}}>{{menuBtnText}}</a>
 </section>
