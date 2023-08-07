@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/cheese-data-structure.model';
 
 @Component({
   selector: 'app-factory-prod-menu',
@@ -16,7 +17,7 @@ export class FactoryProdMenu implements OnInit{
   comitecoAACurrentStorage: number = 0;
   comitecoBACurrentStorage: number = 0;
 
-  filterCheeseDataByDate = (cheeseData:any): void => {
+  filterCheeseDataByDate = (cheeseData:CheeseDataStructureModel[]): void => {
     let baraloso = 0;
     let comiteco = 0;
     let comitecoAa = 0;
@@ -57,11 +58,6 @@ export class FactoryProdMenu implements OnInit{
   ngOnInit(): void {
     this.fetchData();
   };
-  // Supply for ngOnInit
-  // useEffect(() => {
-  //   makeFetch()
-  // }, [])
-  
 }
 
 
