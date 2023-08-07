@@ -14,7 +14,7 @@ export class FactoryProdMenu implements OnInit{
   baralosoCurrentStorage: number = 0;
   comitecoCurrentStorage: number = 0;
   comitecoAACurrentStorage: number = 0;
-  comitecoBArrentStorage: number = 0;
+  comitecoBACurrentStorage: number = 0;
 
   filterCheeseDataByDate = (cheeseData:any): void => {
     let baraloso = 0;
@@ -40,7 +40,7 @@ export class FactoryProdMenu implements OnInit{
     this. baralosoCurrentStorage = baraloso;
     this.comitecoCurrentStorage = comiteco;
     this.comitecoAACurrentStorage = comitecoAa;
-    this.comitecoBArrentStorage = comitecoBa;
+    this.comitecoBACurrentStorage = comitecoBa;
   }
 
   fetchData() {
