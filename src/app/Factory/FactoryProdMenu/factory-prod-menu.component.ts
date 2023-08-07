@@ -16,11 +16,31 @@ export class FactoryProdMenu {
   comitecoAACurrentStorage: number = 0;
   comitecoBArrentStorage: number = 0;
 
-  filterCheeseDataByDate = (data:any): void => {
+  filterCheeseDataByDate = (cheeseData:any): void => {
     let baraloso = 0;
     let comiteco = 0;
     let comitecoAa = 0;
     let comitecoBa = 0;
+
+    cheeseData.map((dataRecords: any) => {
+      if (dataRecords.quesoname === 'Baraloso' && dataRecords.approvepord === 'Verdadero') {
+        baraloso += dataRecords.nopieces
+      }
+      if (dataRecords.quesoname === 'Comiteco' && dataRecords.approvepord === 'Verdadero') {
+        comiteco += dataRecords.nopieces
+      }
+      if (dataRecords.quesoname === 'Comiteco AA' && dataRecords.approvepord === 'Verdadero') {
+        comitecoAa += dataRecords.nopieces
+      }
+      if (dataRecords.quesoname === 'Comiteco BA' && dataRecords.approvepord === 'Verdadero') {
+        comitecoBa += dataRecords.nopieces
+      }
+    })
+
+    this. baralosoCurrentStorage = baraloso;
+    this.comitecoCurrentStorage = comiteco;
+    this.comitecoAACurrentStorage = comitecoAa;
+    this.comitecoBArrentStorage = comitecoBa;
   }
 
   // const [ baralosoStorage, setBaralosoStorage ] = useState<number>(0);
