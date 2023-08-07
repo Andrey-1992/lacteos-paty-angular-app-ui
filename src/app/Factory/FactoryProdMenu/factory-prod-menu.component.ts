@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-factory-prod-menu',
   templateUrl: './factory-prod-menu.component.html',
   styleUrls: ['./factory-prod-menu.component.css']
 })
-export class FactoryProdMenu {
+export class FactoryProdMenu implements OnInit{
   cheeseUrl: string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU";
   dateObj = new Date();
   dateArray = this.dateObj.toString().split(' ');
@@ -42,6 +42,32 @@ export class FactoryProdMenu {
     this.comitecoAACurrentStorage = comitecoAa;
     this.comitecoBArrentStorage = comitecoBa;
   }
+
+  fetchData() {
+
+  }
+  // function to make a fetch call and bring the data from server and after invoke filterCheeseDataByDate();
+  // const makeFetch = (): void => { 
+  //   fetchAllProdRecords()
+  //   .then(data => filterDataByDate(data))
+  //   .catch(error => console.log(error))
+  // }
+
+  
+  ngOnInit(): void {
+    this.fetchData();
+  };
+  // Supply for ngOnInit
+  // useEffect(() => {
+  //   makeFetch()
+  // }, [])
+  
+}
+
+
+
+
+
 
   // const [ baralosoStorage, setBaralosoStorage ] = useState<number>(0);
   // const [ comitecoStorage, setComitecoStorage ] = useState<number>(0);
@@ -96,5 +122,3 @@ export class FactoryProdMenu {
   // useEffect(() => {
   //   makeFetch()
   // }, [])
-
-}
