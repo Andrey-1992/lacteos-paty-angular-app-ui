@@ -12,9 +12,14 @@
         </option>
       ))}
       </select> -->
-      <select ngClass="cheese-categorie-">
-        <option ngClass="option-choice-style" *ngFor="let category of cheeseCategory" value={{category.Value}}>
-          {{category.Name}}
+      <!-- <input [value]="foo" (change)="changeFn($event)"> -->
+      <select ngClass="cheese-categorie-" (change)="getSelectedCategory($event)">
+        <option 
+          ngClass="option-choice-style" 
+          *ngFor="let category of cheeseCategory" 
+          [value]="category.Value" [selected]="category.Name"
+        >
+            {{category.Name}}
         </option>
       </select>
       <h2 ngClass="crear-reporte-queso-texto">Refrigeracion:</h2>
@@ -27,6 +32,7 @@
       </select> -->
       <h2 ngClass="crear-reporte-queso-texto">No Lote:</h2>
       <!-- <input type="text" ngClass="crear-reporte-queso-num" onChange={(event) => setNumLote(event.target.value)}></input> -->
+      <input type="text" ngClass="crear-reporte-queso-num" (change)="getSelectedCategory($event)">
       <h2 ngClass="crear-reporte-queso-texto">No piezas:</h2>
       <!-- <input type="number" ngClass="crear-reporte-queso-num" onChange={(event) => setSelectedPieces(event.target.value)}></input> -->
       <h2 ngClass="crear-reporte-queso-texto">No de Olladas:</h2>

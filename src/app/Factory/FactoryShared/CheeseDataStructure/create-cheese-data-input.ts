@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class CreateCheeseDataInput {
   urlImg = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU';
+  selectedCategory: string;
+
   cheeseCategory = [
     {Name:'Selecione Categoria', Value:''},
     {Name:'Baraloso', Value:'Baraloso'}, {Name:'Comiteco', Value:'Comiteco'}, 
@@ -17,10 +19,18 @@ export class CreateCheeseDataInput {
     {Name:'Selecione Refrigeracion', Value:''}, {Name:'Grande', Value:'Grande'}, 
     {Name:'Mediana', Value:'Mediana'}, {Name:'Chica', Value:'Chica'}
   ];
+
+  getSelectedCategory(e) {
+    this.selectedCategory = e.target.value;
+  }
+
+  getSelectedLoteNo(e) {
+    this.selectedCategory = e.target.value;
+  }
   
   fetchData() {
     event.preventDefault();
-    console.log('testing')
+    console.log(this.selectedCategory)
   }
 
 }
