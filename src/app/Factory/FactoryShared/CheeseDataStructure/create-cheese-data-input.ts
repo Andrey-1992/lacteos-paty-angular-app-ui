@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-cheese-data-input.component.css']
 })
 export class CreateCheeseDataInput {
+  urlImg = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU';
   cheeseCategory = [
     {Name:'Selecione Categoria', Value:''},
     {Name:'Baraloso', Value:'Baraloso'}, {Name:'Comiteco', Value:'Comiteco'}, 

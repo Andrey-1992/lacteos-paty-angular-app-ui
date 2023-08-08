@@ -1,7 +1,7 @@
 <div ngClass="crearReporteProdAdmin">
   <form ngClass="cheese-categories-form">
     <div ngClass="crear-reporte-queso-marco">
-      <!-- <img className="cheese-piece-img" src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU'} alt={'Imagen de Pieza de Queso'} width="200" height="200"></img> -->
+      <img className="cheese-piece-img" src={{urlImg}} alt="Imagen de Pieza de Queso" width="200" height="200">
       <h2 ngClass="crear-reporte-queso-texto">Tipo de Queso:</h2>
       <!-- <select className="cheese-categorie-" onChange={(event) => setSelectedCategory(event.target.value)}>
       {cheeseCategory.map(list => (
@@ -31,6 +31,7 @@
     </div>
   </form>
   <!-- <NavLink to="/go-menu-entradas-prod-admin"> -->
-    <p ngClass='go-back-menu-entradas-prod-admin'>Menu Produccion</p>
+    <!-- <a routerLinkActive="active" routerLink={{menu.urlLink}}>{{menu.textToDisplay}}</a>  -->
+    <A ngClass='go-back-menu-entradas-prod-admin' routerLinkActive="active" routerLink="/factory-prod-inputs-menu">Menu Anterior</A>
   <!-- </NavLink> -->
 </div>
