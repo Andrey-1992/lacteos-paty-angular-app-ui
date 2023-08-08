@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class CreateCheeseDataInput {
   urlImg = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU';
   selectedCategory: string;
+  selectedRefrigerationType: string;
   selectedLoteNo: string | number;
   selectedPzNo: number;
   selectedPotsNo: number;
@@ -26,6 +27,9 @@ export class CreateCheeseDataInput {
 
   getSelectedCategory(e) {
     this.selectedCategory = e.target.value;
+  }
+  getSelectedRefrigerationType(e) {
+    this.selectedRefrigerationType = e.target.value;
   }
 
   getSelectedLoteNo(e) {
@@ -48,6 +52,7 @@ export class CreateCheeseDataInput {
     event.preventDefault();
     console.log(
       this.selectedCategory,
+      this.selectedRefrigerationType,
       this.selectedLoteNo,
       this.selectedPzNo,
       this.selectedPotsNo,

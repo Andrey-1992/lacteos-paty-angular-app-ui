@@ -12,7 +12,6 @@
         </option>
       ))}
       </select> -->
-      <!-- <input [value]="foo" (change)="changeFn($event)"> -->
       <select ngClass="cheese-categorie-" (change)="getSelectedCategory($event)">
         <option 
           ngClass="option-choice-style" 
@@ -23,13 +22,15 @@
         </option>
       </select>
       <h2 ngClass="crear-reporte-queso-texto">Refrigeracion:</h2>
-      <!-- <select ngClass="cheese-categorie-" onChange={(event) => setSelectedRefrigeration(event.target.value)}>
-      {refrigerationCategory.map(list => (
-        <option ngClass="option-choice-style" value={list.Value}>
-          {list.Name}
+      <select ngClass="cheese-categorie-" (change)="getSelectedRefrigerationType($event)">
+        <option 
+          ngClass="option-choice-style" 
+          *ngFor="let refrigeration of refrigerationCategory" 
+          [value]="refrigeration.Value" [selected]="refrigeration.Name"
+        >
+            {{refrigeration.Name}}
         </option>
-      ))}
-      </select> -->
+      </select>
       <h2 ngClass="crear-reporte-queso-texto">No Lote:</h2>
       <!-- <input type="text" ngClass="crear-reporte-queso-num" onChange={(event) => setNumLote(event.target.value)}></input> -->
       <input type="text" ngClass="crear-reporte-queso-num" (change)="getSelectedLoteNo($event)">
