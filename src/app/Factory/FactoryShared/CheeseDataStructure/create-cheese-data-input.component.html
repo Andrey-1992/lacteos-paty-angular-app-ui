@@ -32,13 +32,16 @@
       </select> -->
       <h2 ngClass="crear-reporte-queso-texto">No Lote:</h2>
       <!-- <input type="text" ngClass="crear-reporte-queso-num" onChange={(event) => setNumLote(event.target.value)}></input> -->
-      <input type="text" ngClass="crear-reporte-queso-num" (change)="getSelectedCategory($event)">
+      <input type="text" ngClass="crear-reporte-queso-num" (change)="getSelectedLoteNo($event)">
       <h2 ngClass="crear-reporte-queso-texto">No piezas:</h2>
       <!-- <input type="number" ngClass="crear-reporte-queso-num" onChange={(event) => setSelectedPieces(event.target.value)}></input> -->
+      <input type="number" ngClass="crear-reporte-queso-num" (change)="getSelectedPzNo($event)">
       <h2 ngClass="crear-reporte-queso-texto">No de Olladas:</h2>
       <!-- <input type="number" ngClass="crear-reporte-queso-num" onChange={(event) => setSelectedOlladas(event.target.value)}></input> -->
+      <input type="number" ngClass="crear-reporte-queso-num" (change)="getSelectedPotsNo($event)">
       <h2 ngClass="crear-reporte-queso-texto">Fecha</h2>
       <!-- <input type="date" ngClass="crear-reporte-queso-date" onChange={(event) => setSelectedDate(event.target.value)}></input> -->
+      <input type="date" ngClass="crear-reporte-queso-num" (change)="getSelectedDate($event)">
       <br>
       <!-- <button ngClass='crear-reporte-queso-enviar-btn' disabled={isDisable} onClick={createProdRecord}>{!isDisable? 'Enviar Reporte' : 'Reporte Enviado' }</button> -->
       <button ngClass='crear-reporte-queso-enviar-btn' (click)="fetchData()">Test</button>
