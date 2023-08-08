@@ -31,8 +31,11 @@
       <h2 ngClass="crear-reporte-queso-texto">Fecha</h2>
       <input type="date" ngClass="crear-reporte-queso-num" (change)="getSelectedDate($event)">
       <br>
-      <!-- <button ngClass='crear-reporte-queso-enviar-btn' disabled={isDisable} onClick={createProdRecord}>{!isDisable? 'Enviar Reporte' : 'Reporte Enviado' }</button> -->
-      <button ngClass='crear-reporte-queso-enviar-btn' (click)="fetchData()" disabled={{isDisable}}>{{!isDisable? 'Enviar Reporte' : 'Reporte Enviado' }}</button>
+      <button 
+        ngClass='crear-reporte-queso-enviar-btn' 
+        (click)="fetchData()" 
+        [disabled]="isDisable" 
+      >{{!isDisable? 'Enviar Reporte' : 'Reporte Enviado' }}</button>
     </div>
   </form>
     <A ngClass='go-back-menu-entradas-prod-admin' routerLinkActive="active" routerLink="/factory-prod-inputs-menu">Menu Anterior</A>
