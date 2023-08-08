@@ -3,45 +3,32 @@
     <div ngClass="crear-reporte-queso-marco">
       <img ngClass="cheese-piece-img" src={{urlImg}} alt="Imagen de Pieza de Queso" width="200" height="200">
       <h2 ngClass="crear-reporte-queso-texto">Tipo de Queso:</h2>
-      <!-- <select 
-        ngClass="cheese-categorie-" 
-        onChange={(event) => setSelectedCategory(event.target.value)}>
-          {cheeseCategory.map(list => (
-        <option ngClass="option-choice-style" value={list.Value}>
-          {list.Name}
-        </option>
-      ))}
-      </select> -->
-      <select ngClass="cheese-categorie-" (change)="getSelectedCategory($event)">
-        <option 
-          ngClass="option-choice-style" 
-          *ngFor="let category of cheeseCategory" 
-          [value]="category.Value" [selected]="category.Name"
-        >
-            {{category.Name}}
-        </option>
-      </select>
+        <select ngClass="cheese-categorie-" (change)="getSelectedCategory($event)">
+          <option 
+            ngClass="option-choice-style" 
+            *ngFor="let category of cheeseCategory" 
+            [value]="category.Value" [selected]="category.Name"
+          >
+              {{category.Name}}
+          </option>
+        </select>
       <h2 ngClass="crear-reporte-queso-texto">Refrigeracion:</h2>
-      <select ngClass="cheese-categorie-" (change)="getSelectedRefrigerationType($event)">
-        <option 
-          ngClass="option-choice-style" 
-          *ngFor="let refrigeration of refrigerationCategory" 
-          [value]="refrigeration.Value" [selected]="refrigeration.Name"
-        >
-            {{refrigeration.Name}}
-        </option>
-      </select>
+        <select ngClass="cheese-categorie-" (change)="getSelectedRefrigerationType($event)">
+          <option 
+            ngClass="option-choice-style" 
+            *ngFor="let refrigeration of refrigerationCategory" 
+            [value]="refrigeration.Value" [selected]="refrigeration.Name"
+          >
+              {{refrigeration.Name}}
+          </option>
+        </select>
       <h2 ngClass="crear-reporte-queso-texto">No Lote:</h2>
-      <!-- <input type="text" ngClass="crear-reporte-queso-num" onChange={(event) => setNumLote(event.target.value)}></input> -->
       <input type="text" ngClass="crear-reporte-queso-num" (change)="getSelectedLoteNo($event)">
       <h2 ngClass="crear-reporte-queso-texto">No piezas:</h2>
-      <!-- <input type="number" ngClass="crear-reporte-queso-num" onChange={(event) => setSelectedPieces(event.target.value)}></input> -->
       <input type="number" ngClass="crear-reporte-queso-num" (change)="getSelectedPzNo($event)">
       <h2 ngClass="crear-reporte-queso-texto">No de Olladas:</h2>
-      <!-- <input type="number" ngClass="crear-reporte-queso-num" onChange={(event) => setSelectedOlladas(event.target.value)}></input> -->
       <input type="number" ngClass="crear-reporte-queso-num" (change)="getSelectedPotsNo($event)">
       <h2 ngClass="crear-reporte-queso-texto">Fecha</h2>
-      <!-- <input type="date" ngClass="crear-reporte-queso-date" onChange={(event) => setSelectedDate(event.target.value)}></input> -->
       <input type="date" ngClass="crear-reporte-queso-num" (change)="getSelectedDate($event)">
       <br>
       <!-- <button ngClass='crear-reporte-queso-enviar-btn' disabled={isDisable} onClick={createProdRecord}>{!isDisable? 'Enviar Reporte' : 'Reporte Enviado' }</button> -->
