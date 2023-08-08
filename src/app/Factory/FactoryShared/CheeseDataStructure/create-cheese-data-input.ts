@@ -13,6 +13,7 @@ export class CreateCheeseDataInput {
   selectedPzNo: number;
   selectedPotsNo: number;
   selectedDate: any;
+  isDisable: boolean = false;
 
   cheeseCategory = [
     {Name:'Selecione Categoria', Value:''},
@@ -58,6 +59,7 @@ export class CreateCheeseDataInput {
       this.selectedPotsNo,
       this.selectedDate
     )
+    this.isDisable = true;
   }
 
 }
