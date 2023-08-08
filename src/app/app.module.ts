@@ -9,6 +9,7 @@ import { FactoryAdminLogin } from './Factory/FactoryAdmin/factory-admin-login.co
 import { FactoryProdInputsMenu } from './Factory/FactoryProdInputs/factory-prod-inputs-menu.component';
 import { FactoryProdMenu } from './Factory/FactoryProdMenu/factory-prod-menu.component';
 import { FactoryProdOutputsMenu } from './Factory/FactoryProdOutputs/factory-prod-outputs-menu.component';
+import { CreateCheeseDataInput } from './Factory/FactoryShared/CheeseDataStructure/create-cheese-data-input';
 import { FactoryDynamicMenus } from './Factory/FactoryShared/factory-dynamic-menus.component';
 import { ProductionVsFactoryComponent } from './production-vs-factory/production-vs-factory.component';
 
@@ -22,7 +23,8 @@ import { ProductionVsFactoryComponent } from './production-vs-factory/production
     FactoryMenu,
     FactoryProdMenu,
     FactoryProdInputsMenu,
-    FactoryProdOutputsMenu
+    FactoryProdOutputsMenu,
+    CreateCheeseDataInput
   ],
   imports: [
     BrowserModule,

@@ -23,7 +23,7 @@ export class FactoryProdMenu implements OnInit{
     let comitecoAa = 0;
     let comitecoBa = 0;
 
-    cheeseData.map((dataRecords: any) => {
+    cheeseData.map((dataRecords: CheeseDataStructureModel) => {
       if (dataRecords.quesoname === 'Baraloso' && dataRecords.approvepord === 'Verdadero') {
         baraloso += dataRecords.nopieces
       }
