@@ -17,5 +17,10 @@ export class CreateCheeseDataInput {
     {Name:'Selecione Refrigeracion', Value:''}, {Name:'Grande', Value:'Grande'}, 
     {Name:'Mediana', Value:'Mediana'}, {Name:'Chica', Value:'Chica'}
   ];
+  
+  fetchData() {
+    event.preventDefault();
+    console.log('testing')
+  }
 
 }
