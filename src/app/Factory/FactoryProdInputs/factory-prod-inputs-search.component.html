@@ -1,1 +1,39 @@
-<h1>TEEEEEEST</h1>
+<div ngClass="fabrica">
+  <form ngClass="top-filter-search-prods">
+    <select ngClass="select-month-search" (change)="getSelectedCategory($event)">
+      <option 
+        ngClass="option-choice-style"
+        *ngFor="let category of cheeseCategory" 
+        [value]="category.Value" [selected]="category.Name"
+      >
+          {{category.Name}}
+      </option>
+    </select>
+    <!-- <select ngClass="select-month-search" value={selectedCategory} onChange={(event) => setSelectedCategory(event.target.value)}>
+      {cheeseCategory.map(list => (
+        <option ngClass="option-choice-style" value={list.Value}>
+          {list.Name}
+        </option>
+      ))}
+    </select> -->
+    <!-- <select ngClass="select-month-search" onChange={(event) => setSelectedMonth(event.target.value)}>
+    {monthSelection.map(list => (
+      <option ngClass="option-date-style" value={list.Value}>
+        {list.Name}
+      </option>
+    ))}
+    </select> -->
+    <!-- <select ngClass="select-year-search" onChange={(event) => setSelectedYear(event.target.value)}>
+    {yearSelection.map(list => (
+      <option ngClass="option-date-style" value={list.Value}>
+        {list.Name}
+      </option>
+    ))}
+    </select> -->
+    <!-- <button ngClass='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button> -->
+  </form>
+  <!-- {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>} -->
+  <!-- <NavLink to="/go-menu-entradas-prod-admin"> -->
+    <p ngClass='go-back-menu-entradas-prod-admin-busqueda' routerLinkActive="active" routerLink="/factory-prod-inputs-menu">Menu Anterior</p>
+  <!-- </NavLink> -->
+</div>
