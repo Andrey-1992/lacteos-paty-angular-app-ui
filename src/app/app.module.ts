@@ -12,6 +12,7 @@ import { FactoryProdOutputsMenu } from './Factory/FactoryProdOutputs/factory-pro
 import { CreateCheeseDataInput } from './Factory/FactoryShared/CheeseDataStructure/create-cheese-data-input';
 import { FactoryDynamicMenus } from './Factory/FactoryShared/factory-dynamic-menus.component';
 import { ProductionVsFactoryComponent } from './production-vs-factory/production-vs-factory.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProductionVsFactoryComponent } from './production-vs-factory/production
   ],
   imports: [
     BrowserModule,
-    AppRoutingFactoryModule
+    AppRoutingFactoryModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
