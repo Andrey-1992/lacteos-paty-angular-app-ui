@@ -15,6 +15,7 @@ export class DataStorageService {
       for (const key in resData) {
         postArray.push({...resData[key], id: key})
       }
+      return postArray;
     }))
     .subscribe(resData => {
       console.log(resData);
