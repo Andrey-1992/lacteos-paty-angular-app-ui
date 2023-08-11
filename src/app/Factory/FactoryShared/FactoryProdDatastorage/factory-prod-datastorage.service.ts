@@ -9,5 +9,8 @@ export class DataStorageService {
 
   storeCheeseRecord(cheeseData: CheeseDataStructureModel) {
     this.http.post('https://fabrica-produccion-database-default-rtdb.firebaseio.com/cheese-record.json', cheeseData)
+    .subscribe(resData => {
+      console.log(resData);
+    })
   }
 }
