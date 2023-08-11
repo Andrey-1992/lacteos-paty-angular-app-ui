@@ -35,4 +35,38 @@ export class DataHandlingService {
     filterData.push(baraloso, comiteco, comitecoAa, comitecoBa);
     return filterData;
   }
+
+  filterDataByDate = (categoy: string, month: string, year: string) => {
+    console.log(categoy, month, year)
+    this.dataStorage.getCheeseRecords()
+    .subscribe(resData => {
+      resData.map((dataRecords: CheeseDataStructureModel) => {
+        if (dataRecords.cheeseName === 'Baraloso' && dataRecords.approveProd === 'Verdadero') {
+          baraloso.piecesNo += parseInt(dataRecords.piecesNo);
+        }
+        if (dataRecords.cheeseName === 'Comiteco' && dataRecords.approveProd === 'Verdadero') {
+          comiteco.piecesNo += parseInt(dataRecords.piecesNo);
+        }
+        if (dataRecords.cheeseName === 'Comiteco AA' && dataRecords.approveProd === 'Verdadero') {
+          comitecoAa.piecesNo += parseInt(dataRecords.piecesNo);
+        }
+        if (dataRecords.cheeseName === 'Comiteco BA' && dataRecords.approveProd === 'Verdadero') {
+          comitecoBa.piecesNo += parseInt(dataRecords.piecesNo);
+        }
+      })
+    })
+    // const dataFiltered = data.reduce((acc:any, dataRecords: any) => {
+    //   const cheeseCat = dataRecords.quesoname;
+    //   const yearData = dataRecords.datein.split('-')[0];
+    //   const monthData = dataRecords.datein.split('-')[1]
+    //   if (yearData === selectedYear && monthData === selectedMonth && selectedCategory === 'Todos' && dataRecords.quesostatus === 'Entrada') {
+    //     acc.push(dataRecords)
+    //   }
+    //   if (yearData === selectedYear && monthData === selectedMonth && selectedCategory === cheeseCat && dataRecords.quesostatus === 'Entrada') {
+    //     acc.push(dataRecords)
+    //   }
+    //   return acc;
+    // }, [])
+    // setFetchedRecords(dataFiltered);
+  }
 }

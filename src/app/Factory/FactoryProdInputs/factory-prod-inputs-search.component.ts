@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FactoryDynamicMenusModel } from '../FactoryShared/factory-dynamic-menus.model';
+import { DataHandlingService } from '../FactoryShared/FactoryProdDatastorage/factory-prod-data-handling.service';
 
 @Component({
   selector: 'app-search-cheese-input',
@@ -8,6 +9,8 @@ import { FactoryDynamicMenusModel } from '../FactoryShared/factory-dynamic-menus
 })
 
 export class FactoryProdInputsSearch {
+  constructor(private dataHandlingSer: DataHandlingService) {}
+
   selectedCategory: string;
   selectedMonth: string;
   selectedYear: string;
@@ -46,10 +49,6 @@ export class FactoryProdInputsSearch {
 
   searchRecords() {
     event.preventDefault();
-    console.log(
-      this.selectedCategory,
-      this.selectedMonth,
-      this.selectedYear
-    )
+    this.dataHandlingSer.filterDataByDate(this.selectedCategory, this.selectedMonth, this.selectedYear);
   }
 };
