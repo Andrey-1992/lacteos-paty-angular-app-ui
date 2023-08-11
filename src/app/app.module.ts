@@ -13,6 +13,7 @@ import { CreateCheeseDataInput } from './Factory/FactoryShared/CheeseDataStructu
 import { FactoryDynamicMenus } from './Factory/FactoryShared/factory-dynamic-menus.component';
 import { ProductionVsFactoryComponent } from './production-vs-factory/production-vs-factory.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { DataHandlingService } from './Factory/FactoryShared/FactoryProdDatastorage/factory-prod-data-handling.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     AppRoutingFactoryModule,
     HttpClientModule 
   ],
-  providers: [],
+  providers: [DataHandlingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
