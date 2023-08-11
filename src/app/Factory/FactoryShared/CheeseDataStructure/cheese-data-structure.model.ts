@@ -4,15 +4,15 @@ export class CheeseDataStructureModel {
     public quesoname?: string,
     public quesostatus?: string,
     public quesoavailability?: boolean,
-    public nopieces?: number,
-    public nopiecessalida?: number,
+    public piecesNo?: number,
+    public piecesOutNo?: number,
     public weigth?: number,
     public weigthcurrent?: number,
-    public holladas?: number,
+    public potsNo?: number,
     public datein?: string,
     public dateout?: string ,
     public price?: number,
     public approvepord?: string,
-    public lotenum?: string
+    public lotenum?: number
   ) {}
 };
