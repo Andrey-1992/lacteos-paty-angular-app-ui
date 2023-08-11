@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/cheese-data-structure.model';
 import { DataStorageService } from '../FactoryShared/FactoryProdDatastorage/factory-prod-datastorage.service';
+import { map } from "rxjs/operators";
+
 
 @Component({
   selector: 'app-factory-prod-menu',
@@ -61,65 +63,9 @@ export class FactoryProdMenu implements OnInit{
 
   
   ngOnInit(): void {
-    this.fetchData();
+    this.dataStorage.getCheeseRecords()
+    .subscribe(resData => {
+      this.filterCheeseDataByDate(resData);
+    })
   };
 }
-
-
-
-
-
-
-  // const [ baralosoStorage, setBaralosoStorage ] = useState<number>(0);
-  // const [ comitecoStorage, setComitecoStorage ] = useState<number>(0);
-  // const [ comitecoAaStorage, setComitecoAaStorage ] = useState<number>(0);
-  // const [ comitecoBaStorage, setComitecoBaStorage ] = useState<number>(0);
-  // const [ florAaStorage, setFlorAaStorage ] = useState<number>(0);
-  // const [ florBaStorage, setFlorBaStorage ] = useState<number>(0);
-
-
-  // const filterDataByDate = (data:any): void => {
-  //   let baraloso = 0;
-  //   let comiteco = 0;
-  //   let comitecoAa = 0;
-  //   let comitecoBa = 0;
-  //   let florAa = 0;
-  //   let florBa = 0;
-
-  //   const dataFiltered = data.map((dataRecords: any) => {
-  //     if (dataRecords.quesoname === 'Baraloso' && dataRecords.approvepord === 'Verdadero') {
-  //       baraloso += dataRecords.nopieces
-  //     }
-  //     if (dataRecords.quesoname === 'Comiteco' && dataRecords.approvepord === 'Verdadero') {
-  //       comiteco += dataRecords.nopieces
-  //     }
-  //     if (dataRecords.quesoname === 'Comiteco AA' && dataRecords.approvepord === 'Verdadero') {
-  //       comitecoAa += dataRecords.nopieces
-  //     }
-  //     if (dataRecords.quesoname === 'Comiteco BA' && dataRecords.approvepord === 'Verdadero') {
-  //       comitecoBa += dataRecords.nopieces
-  //     }
-  //     if (dataRecords.quesoname === 'Flor AA' && dataRecords.approvepord === 'Verdadero') {
-  //       florAa += dataRecords.nopieces
-  //     }
-  //     if (dataRecords.quesoname === 'Flor BA' && dataRecords.approvepord === 'Verdadero') {
-  //       florBa += dataRecords.nopieces
-  //     }
-  //   })
-  //   setBaralosoStorage(baraloso);
-  //   setComitecoStorage(comiteco);
-  //   setComitecoAaStorage(comitecoAa);
-  //   setComitecoBaStorage(comitecoBa);
-  //   setFlorAaStorage(florAa);
-  //   setFlorBaStorage(florBa);
-  // }
-
-  // const makeFetch = (): void => {
-  //   fetchAllProdRecords()
-  //   .then(data => filterDataByDate(data))
-  //   .catch(error => console.log(error))
-  // }
-
-  // useEffect(() => {
-  //   makeFetch()
-  // }, [])
