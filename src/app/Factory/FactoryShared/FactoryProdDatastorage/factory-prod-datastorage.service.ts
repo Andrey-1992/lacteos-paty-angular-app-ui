@@ -9,7 +9,7 @@ export class DataStorageService {
   constructor(private http: HttpClient) {}
 
   getCheeseRecords() {
-    this.http.get('https://fabrica-produccion-database-default-rtdb.firebaseio.com/cheese-record.json')
+    this.http.get<CheeseDataStructureModel[]>('https://fabrica-produccion-database-default-rtdb.firebaseio.com/cheese-record.json')
     .pipe(map(resData => {
       const postArray = [];
       for (const key in resData) {
@@ -23,7 +23,7 @@ export class DataStorageService {
   }
 
   storeCheeseRecord(cheeseData: CheeseDataStructureModel) {
-    this.http.post('https://fabrica-produccion-database-default-rtdb.firebaseio.com/cheese-record.json', cheeseData)
+    this.http.post<CheeseDataStructureModel>('https://fabrica-produccion-database-default-rtdb.firebaseio.com/cheese-record.json', cheeseData)
     .subscribe(resData => {
       console.log(resData);
     })
