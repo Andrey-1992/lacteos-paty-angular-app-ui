@@ -8,12 +8,12 @@
     {{todaysDate}}
     </h2>
   </div>
-  <div ngClass='cheese-invetory-container'>
+  <div ngClass='cheese-invetory-container' *ngFor="let chesseData of filterData" >
     <div ngClass="cheese-invenroty-card">
       <img ngClass="cheese-piece-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU" alt="Imagen de Pieza de Queso" width="100" height="100">
-      <p ngClass="cheese-invenroty-card-name">Baraloso</p>
+      <p ngClass="cheese-invenroty-card-name">{{cheeseData.cheeseName}}</p>
       <p ngClass="cheese-invenroty-card-nopieces-text">No Piezas:</p>
-      <p ngClass="cheese-invenroty-card-nopieces-num">{{baralosoCurrentStorage}}</p>
+      <p ngClass="cheese-invenroty-card-nopieces-num">{{cheeseData.piecesNo}}</p>
     </div>
   </div>
   <!-- <div ngClass='cheese-invetory-container'>

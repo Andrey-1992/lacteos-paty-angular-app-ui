@@ -12,19 +12,20 @@ import { DataHandlingService } from '../FactoryShared/FactoryProdDatastorage/fac
 })
 export class FactoryProdMenu implements OnInit{
   constructor(private dataHandlingService: DataHandlingService ,private dataStorage: DataStorageService) {}
+  
   filterData: {cheeseName: '', piecesNo: 0}[] = [];
+  dateObj = new Date();
+  dateArray = this.dateObj.toString().split(' ');
+  todaysDate = this.dateArray.splice(1, 3).join(' / ');
 
   ngOnInit(): void {
     // this.dataStorage.getCheeseRecords()
     // .subscribe(resData => {
     //   this.filterCheeseDataByDate(resData);
     // })
-    console.log(this.dataHandlingService.filterCheeseDataByDate());
+    this.filterData = this.dataHandlingService.filterCheeseDataByDate();
+    console.log(this.filterData);
   };
-
-  dateObj = new Date();
-  dateArray = this.dateObj.toString().split(' ');
-  todaysDate = this.dateArray.splice(1, 3).join(' / ');
 
   // baralosoCurrentStorage: number = 0;
   // comitecoCurrentStorage: number = 0;
