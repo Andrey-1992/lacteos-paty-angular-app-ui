@@ -8,6 +8,8 @@ import { DataHandlingService } from '../FactoryShared/FactoryProdDatastorage/fac
   styleUrls: ['./factory-prod-menu.component.css']
 })
 export class FactoryProdMenu implements OnInit{
+
+  constructor(private dataHandlingService: DataHandlingService) {}
   
   filterData: {cheeseName: '', piecesNo: 0}[] = [];
   fetchedData: boolean = false;
@@ -16,13 +18,10 @@ export class FactoryProdMenu implements OnInit{
   dateArray = this.dateObj.toString().split(' ');
   todaysDate = this.dateArray.splice(1, 3).join(' / ');
 
-  constructor(private dataHandlingService: DataHandlingService) {}
-
   ngOnInit(): void {
     this.filterData = this.dataHandlingService.filterCheeseDataByDate();
     if (this.filterData.length > 0) {
       this.fetchedData = true;
     }
-    // console.log(this.filterData);
   };
 }

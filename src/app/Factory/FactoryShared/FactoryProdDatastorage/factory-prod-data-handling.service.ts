@@ -5,35 +5,34 @@ import { DataStorageService } from "./factory-prod-datastorage.service";
 
 @Injectable({providedIn: 'root'})
 export class DataHandlingService {
+
   constructor(private dataStorage: DataStorageService) {}
 
   filterCheeseDataByDate = (): {cheeseName: '', piecesNo: 0}[] => {
     const filterData = [];
-    let baraloso = {cheeseName: 'Baraloso', piecesNo: 0};
+    let baraloso = {cheeseName: 'Baraloso', piecesNo: 0 };
+    let baralosoCount = 0;
     let comiteco = {cheeseName: 'Comiteco', piecesNo: 0};
     let comitecoAa = {cheeseName: 'Comiteco AA', piecesNo: 0};
     let comitecoBa = {cheeseName: 'Comiteco BA', piecesNo: 0};
-
     this.dataStorage.getCheeseRecords()
     .subscribe(resData => {
       resData.map((dataRecords: CheeseDataStructureModel) => {
         if (dataRecords.cheeseName === 'Baraloso' && dataRecords.approveProd === 'Verdadero') {
-          baraloso.piecesNo += dataRecords.piecesNo;
+          baraloso.piecesNo += parseInt(dataRecords.piecesNo);
         }
         if (dataRecords.cheeseName === 'Comiteco' && dataRecords.approveProd === 'Verdadero') {
-          comiteco.piecesNo += dataRecords.piecesNo
+          comiteco.piecesNo += parseInt(dataRecords.piecesNo);
         }
         if (dataRecords.cheeseName === 'Comiteco AA' && dataRecords.approveProd === 'Verdadero') {
-          comitecoAa.piecesNo += dataRecords.piecesNo
+          comitecoAa.piecesNo += parseInt(dataRecords.piecesNo);
         }
         if (dataRecords.cheeseName === 'Comiteco BA' && dataRecords.approveProd === 'Verdadero') {
-          comitecoBa.piecesNo += dataRecords.piecesNo
+          comitecoBa.piecesNo += parseInt(dataRecords.piecesNo);
         }
       })
     })
-    
     filterData.push(baraloso, comiteco, comitecoAa, comitecoBa);
-    // console.log(filterData)
     return filterData;
   }
 }

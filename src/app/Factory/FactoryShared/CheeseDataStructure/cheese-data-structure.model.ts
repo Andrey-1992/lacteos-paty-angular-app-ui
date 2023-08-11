@@ -4,7 +4,7 @@ export class CheeseDataStructureModel {
     public cheeseName?: string,
     public cheeseStatus?: string,
     public cheeseAvailability?: boolean,
-    public piecesNo?: number,
+    public piecesNo?: any,
     public piecesOutNo?: number,
     public weight?: number,
     public currentWeight?: number,
