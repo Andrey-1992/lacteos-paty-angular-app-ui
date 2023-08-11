@@ -8,6 +8,6 @@ export class DataStorageService {
   constructor(private http: HttpClient) {}
 
   storeCheeseRecord(cheeseData: CheeseDataStructureModel) {
-    this.http.post()
+    this.http.post('https://fabrica-produccion-database-default-rtdb.firebaseio.com/cheese-record.json', cheeseData)
   }
 }
