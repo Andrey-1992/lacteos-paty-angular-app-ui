@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/cheese-data-structure.model';
+import { DataStorageService } from '../FactoryShared/FactoryProdDatastorage/factory-prod-datastorage.service';
 
 @Component({
   selector: 'app-factory-prod-menu',
@@ -7,6 +8,10 @@ import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/c
   styleUrls: ['./factory-prod-menu.component.css']
 })
 export class FactoryProdMenu implements OnInit{
+
+  constructor(private dataStorage: DataStorageService) {}
+
+
   cheeseUrl: string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU";
   dateObj = new Date();
   dateArray = this.dateObj.toString().split(' ');

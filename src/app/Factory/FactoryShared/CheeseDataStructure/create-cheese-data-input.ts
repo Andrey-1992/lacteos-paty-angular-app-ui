@@ -7,6 +7,8 @@ import { DataStorageService } from '../FactoryProdDatastorage/factory-prod-datas
   styleUrls: ['./create-cheese-data-input.component.css']
 })
 export class CreateCheeseDataInput {
+
+  constructor(private dataStorage: DataStorageService) {}
   
   urlImg = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU';
   selectedCategory: string;
@@ -28,8 +30,6 @@ export class CreateCheeseDataInput {
     {Name:'Mediana', Value:'Mediana'}, {Name:'Chica', Value:'Chica'}
   ];
   
-  constructor(private dataStorage: DataStorageService) {}
-
   getSelectedCategory(e) {
     this.selectedCategory = e.target.value;
   }
@@ -56,7 +56,6 @@ export class CreateCheeseDataInput {
   postData() {
     event.preventDefault();
     this.dataStorage.storeCheeseRecord({
-      // id?: number,
       cheeseName: this.selectedCategory,
       cheeseStatus: 'Entrada',
       cheeseAvailability: true,
