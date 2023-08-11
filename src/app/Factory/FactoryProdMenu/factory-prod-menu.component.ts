@@ -11,26 +11,25 @@ import { DataHandlingService } from '../FactoryShared/FactoryProdDatastorage/fac
   styleUrls: ['./factory-prod-menu.component.css']
 })
 export class FactoryProdMenu implements OnInit{
-
   constructor(private dataHandlingService: DataHandlingService ,private dataStorage: DataStorageService) {}
+  filterData: {cheeseName: '', piecesNo: 0}[] = [];
 
   ngOnInit(): void {
     // this.dataStorage.getCheeseRecords()
     // .subscribe(resData => {
     //   this.filterCheeseDataByDate(resData);
     // })
-    this.dataHandlingService.filterCheeseDataByDate();
+    console.log(this.dataHandlingService.filterCheeseDataByDate());
   };
 
-  cheeseUrl: string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU";
   dateObj = new Date();
   dateArray = this.dateObj.toString().split(' ');
   todaysDate = this.dateArray.splice(1, 3).join(' / ');
 
-  baralosoCurrentStorage: number = 0;
-  comitecoCurrentStorage: number = 0;
-  comitecoAACurrentStorage: number = 0;
-  comitecoBACurrentStorage: number = 0;
+  // baralosoCurrentStorage: number = 0;
+  // comitecoCurrentStorage: number = 0;
+  // comitecoAACurrentStorage: number = 0;
+  // comitecoBACurrentStorage: number = 0;
 
   // filterCheeseDataByDate = (cheeseData:CheeseDataStructureModel[]): void => {
   //   let baraloso = 0;

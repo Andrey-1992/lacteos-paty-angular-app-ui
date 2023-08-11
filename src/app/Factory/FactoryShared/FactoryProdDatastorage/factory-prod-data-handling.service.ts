@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { filter } from "rxjs";
 import { CheeseDataStructureModel } from "../CheeseDataStructure/cheese-data-structure.model";
 import { DataStorageService } from "./factory-prod-datastorage.service";
 
@@ -6,41 +7,33 @@ import { DataStorageService } from "./factory-prod-datastorage.service";
 export class DataHandlingService {
   constructor(private dataStorage: DataStorageService) {}
 
-  fetchedCheeseRecords: CheeseDataStructureModel[];
-  baralosoCurrentStorage: number = 0;
-  comitecoCurrentStorage: number = 0;
-  comitecoAACurrentStorage: number = 0;
-  comitecoBACurrentStorage: number = 0;
+  filterCheeseDataByDate = (): {cheeseName: '', piecesNo: 0}[] => {
+    const filterData = [];
+    let baraloso = {cheeseName: 'Baraloso', piecesNo: 0};
+    let comiteco = {cheeseName: 'Comiteco', piecesNo: 0};
+    let comitecoAa = {cheeseName: 'Comiteco AA', piecesNo: 0};
+    let comitecoBa = {cheeseName: 'Comiteco BA', piecesNo: 0};
 
-  filterCheeseDataByDate = (): void => {
     this.dataStorage.getCheeseRecords()
     .subscribe(resData => {
-      this.fetchedCheeseRecords = resData;
+      resData.map((dataRecords: CheeseDataStructureModel) => {
+        if (dataRecords.cheeseName === 'Baraloso' && dataRecords.approveProd === 'Verdadero') {
+          baraloso.piecesNo += dataRecords.piecesNo;
+        }
+        if (dataRecords.cheeseName === 'Comiteco' && dataRecords.approveProd === 'Verdadero') {
+          comiteco.piecesNo += dataRecords.piecesNo
+        }
+        if (dataRecords.cheeseName === 'Comiteco AA' && dataRecords.approveProd === 'Verdadero') {
+          comitecoAa.piecesNo += dataRecords.piecesNo
+        }
+        if (dataRecords.cheeseName === 'Comiteco BA' && dataRecords.approveProd === 'Verdadero') {
+          comitecoBa.piecesNo += dataRecords.piecesNo
+        }
+      })
     })
-    let baraloso = 0;
-    let comiteco = 0;
-    let comitecoAa = 0;
-    let comitecoBa = 0;
-    console.log(this.fetchedCheeseRecords)
-
-    this.fetchedCheeseRecords.map((dataRecords: CheeseDataStructureModel) => {
-      if (dataRecords.cheeseName === 'Baraloso' && dataRecords.approveProd === 'Verdadero') {
-        baraloso += dataRecords.piecesNo
-      }
-      if (dataRecords.cheeseName === 'Comiteco' && dataRecords.approveProd === 'Verdadero') {
-        comiteco += dataRecords.piecesNo
-      }
-      if (dataRecords.cheeseName === 'Comiteco AA' && dataRecords.approveProd === 'Verdadero') {
-        comitecoAa += dataRecords.piecesNo
-      }
-      if (dataRecords.cheeseName === 'Comiteco BA' && dataRecords.approveProd === 'Verdadero') {
-        comitecoBa += dataRecords.piecesNo
-      }
-    })
-
-    this. baralosoCurrentStorage = baraloso;
-    this.comitecoCurrentStorage = comiteco;
-    this.comitecoAACurrentStorage = comitecoAa;
-    this.comitecoBACurrentStorage = comitecoBa;
+    
+    filterData.push(baraloso, comiteco, comitecoAa, comitecoBa);
+    // console.log(filterData)
+    return filterData;
   }
 }
