@@ -4,12 +4,11 @@ import { CheeseDataStructureModel } from "../CheeseDataStructure/cheese-data-str
 import { map } from "rxjs/operators";
 
 @Injectable({providedIn: 'root'})
-
 export class DataStorageService {
   constructor(private http: HttpClient) {}
 
   getCheeseRecords() {
-    return this.http.get<CheeseDataStructureModel[]>('https://fabrica-produccion-database-default-rtdb.firebaseio.com/cheese-record.json')
+    return this.http.get<CheeseDataStructureModel[]>('https://fabrica-produccion-database-default-rtdb.firebaseio.com/cheese-record.json/')
     .pipe(map(resData => {
       const postArray = [];
       for (const key in resData) {
@@ -17,9 +16,9 @@ export class DataStorageService {
       }
       return postArray;
     }))
-    // .subscribe(resData => {
-    //   return resData;
-    // })
+    .subscribe(resData => {
+      console.log(resData);
+    })
   }
 
   storeCheeseRecord(cheeseData: CheeseDataStructureModel) {

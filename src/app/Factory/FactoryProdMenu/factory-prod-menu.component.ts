@@ -13,6 +13,12 @@ export class FactoryProdMenu implements OnInit{
 
   constructor(private dataStorage: DataStorageService) {}
 
+  ngOnInit(): void {
+    // this.dataStorage.getCheeseRecords()
+    // .subscribe(resData => {
+    //   this.filterCheeseDataByDate(resData);
+    // })
+  };
 
   cheeseUrl: string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU";
   dateObj = new Date();
@@ -29,6 +35,7 @@ export class FactoryProdMenu implements OnInit{
     let comiteco = 0;
     let comitecoAa = 0;
     let comitecoBa = 0;
+    console.log(cheeseData)
 
     cheeseData.map((dataRecords: CheeseDataStructureModel) => {
       if (dataRecords.cheeseName === 'Baraloso' && dataRecords.approveProd === 'Verdadero') {
@@ -50,22 +57,4 @@ export class FactoryProdMenu implements OnInit{
     this.comitecoAACurrentStorage = comitecoAa;
     this.comitecoBACurrentStorage = comitecoBa;
   }
-
-  fetchData() {
-
-  }
-  // function to make a fetch call and bring the data from server and after invoke filterCheeseDataByDate();
-  // const makeFetch = (): void => { 
-  //   fetchAllProdRecords()
-  //   .then(data => filterDataByDate(data))
-  //   .catch(error => console.log(error))
-  // }
-
-  
-  ngOnInit(): void {
-    this.dataStorage.getCheeseRecords()
-    .subscribe(resData => {
-      this.filterCheeseDataByDate(resData);
-    })
-  };
 }

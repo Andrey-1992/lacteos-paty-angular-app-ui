@@ -67,7 +67,7 @@ export class CreateCheeseDataInput {
       dateIn: this.selectedDate,
       dateOut: '',
       price: 0,
-      approveProd: 'Falso',
+      approveProd: 'Verdadero',
       loteNo: this.selectedLoteNo
     })
     this.isDisable = true;
