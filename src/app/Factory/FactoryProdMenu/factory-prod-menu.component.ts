@@ -12,8 +12,9 @@ import { DataHandlingService } from '../FactoryShared/FactoryProdDatastorage/fac
 })
 export class FactoryProdMenu implements OnInit{
   constructor(private dataHandlingService: DataHandlingService ,private dataStorage: DataStorageService) {}
-  
+
   filterData: {cheeseName: '', piecesNo: 0}[] = [];
+  fetchedData: boolean = false;
   dateObj = new Date();
   dateArray = this.dateObj.toString().split(' ');
   todaysDate = this.dateArray.splice(1, 3).join(' / ');
@@ -24,6 +25,9 @@ export class FactoryProdMenu implements OnInit{
     //   this.filterCheeseDataByDate(resData);
     // })
     this.filterData = this.dataHandlingService.filterCheeseDataByDate();
+    if (this.filterData.length > 0) {
+      this.fetchedData = true;
+    }
     console.log(this.filterData);
   };
 
