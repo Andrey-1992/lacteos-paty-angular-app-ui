@@ -22,11 +22,11 @@ export class FactoryProdInputsMenu {
     this.dynamicMenus = [
       {
         textToDisplay: 'Buscar Reporte', 
-        urlLink: '/factory-prod',
+        urlLink: '',
       },
       {
         textToDisplay: 'Crear Reporte', 
-        urlLink: ''
+        urlLink: '/factory-prod-inputs-create'
       },
       {
         textToDisplay: 'Crear Nota', 

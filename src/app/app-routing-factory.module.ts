@@ -6,6 +6,7 @@ import { FactoryAdminLogin } from "./Factory/FactoryAdmin/factory-admin-login.co
 import { FactoryProdInputsMenu } from "./Factory/FactoryProdInputs/factory-prod-inputs-menu.component";
 import { FactoryProdMenu } from "./Factory/FactoryProdMenu/factory-prod-menu.component";
 import { FactoryProdOutputsMenu } from "./Factory/FactoryProdOutputs/factory-prod-outputs-menu.component";
+import { CreateCheeseDataInput } from "./Factory/FactoryShared/CheeseDataStructure/create-cheese-data-input";
 import { ProductionVsFactoryComponent } from "./production-vs-factory/production-vs-factory.component";
 
 const appRoutes: Routes = [
@@ -16,7 +17,8 @@ const appRoutes: Routes = [
   {path: 'factory-menu', component: FactoryMenu},
   {path: 'factory-prod', component: FactoryProdMenu},
   {path: 'factory-prod-inputs-menu', component: FactoryProdInputsMenu},
-  {path: 'factory-prod-outputs-menu', component: FactoryProdOutputsMenu}
+  {path: 'factory-prod-outputs-menu', component: FactoryProdOutputsMenu},
+  {path: 'factory-prod-inputs-create', component: CreateCheeseDataInput}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
