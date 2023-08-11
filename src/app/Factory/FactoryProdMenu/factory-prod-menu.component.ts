@@ -25,16 +25,16 @@ export class FactoryProdMenu implements OnInit{
 
     cheeseData.map((dataRecords: CheeseDataStructureModel) => {
       if (dataRecords.quesoname === 'Baraloso' && dataRecords.approvepord === 'Verdadero') {
-        baraloso += dataRecords.nopieces
+        baraloso += dataRecords.piecesNo
       }
       if (dataRecords.quesoname === 'Comiteco' && dataRecords.approvepord === 'Verdadero') {
-        comiteco += dataRecords.nopieces
+        comiteco += dataRecords.piecesNo
       }
       if (dataRecords.quesoname === 'Comiteco AA' && dataRecords.approvepord === 'Verdadero') {
-        comitecoAa += dataRecords.nopieces
+        comitecoAa += dataRecords.piecesNo
       }
       if (dataRecords.quesoname === 'Comiteco BA' && dataRecords.approvepord === 'Verdadero') {
-        comitecoBa += dataRecords.nopieces
+        comitecoBa += dataRecords.piecesNo
       }
     })
 
