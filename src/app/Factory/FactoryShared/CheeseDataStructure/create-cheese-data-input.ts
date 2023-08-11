@@ -80,14 +80,14 @@ export class CreateCheeseDataInput {
       quesoavailability: true,
       piecesNo: this.selectedPzNo,
       piecesOutNo: 0,
-      weigth: 0,
-      weigthcurrent: 0,
+      weight: 0,
+      currentWeight: 0,
       potsNo: this.selectedPotsNo,
-      datein: this.selectedDate,
-      dateout: '',
+      dateIn: this.selectedDate,
+      dateOut: '',
       price: 0,
-      approvepord: 'Falso',
-      lotenum: this.selectedLoteNo
+      approveProd: 'Falso',
+      loteNo: this.selectedLoteNo
     })
 
 

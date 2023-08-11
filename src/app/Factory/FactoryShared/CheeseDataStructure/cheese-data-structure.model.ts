@@ -1,18 +1,18 @@
 export class CheeseDataStructureModel {
   constructor(
     public id?: number,
-    public quesoname?: string,
-    public quesostatus?: string,
-    public quesoavailability?: boolean,
+    public cheeseName?: string,
+    public cheeseStatus?: string,
+    public cheeseAvailability?: boolean,
     public piecesNo?: number,
     public piecesOutNo?: number,
-    public weigth?: number,
-    public weigthcurrent?: number,
+    public weight?: number,
+    public currentWeight?: number,
     public potsNo?: number,
-    public datein?: string,
-    public dateout?: string ,
+    public dateIn?: string,
+    public dateOut?: string ,
     public price?: number,
-    public approvepord?: string,
-    public lotenum?: number
+    public approveProd?: string,
+    public loteNo?: number
   ) {}
 };

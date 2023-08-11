@@ -24,16 +24,16 @@ export class FactoryProdMenu implements OnInit{
     let comitecoBa = 0;
 
     cheeseData.map((dataRecords: CheeseDataStructureModel) => {
-      if (dataRecords.quesoname === 'Baraloso' && dataRecords.approvepord === 'Verdadero') {
+      if (dataRecords.cheeseName === 'Baraloso' && dataRecords.approveProd === 'Verdadero') {
         baraloso += dataRecords.piecesNo
       }
-      if (dataRecords.quesoname === 'Comiteco' && dataRecords.approvepord === 'Verdadero') {
+      if (dataRecords.cheeseName === 'Comiteco' && dataRecords.approveProd === 'Verdadero') {
         comiteco += dataRecords.piecesNo
       }
-      if (dataRecords.quesoname === 'Comiteco AA' && dataRecords.approvepord === 'Verdadero') {
+      if (dataRecords.cheeseName === 'Comiteco AA' && dataRecords.approveProd === 'Verdadero') {
         comitecoAa += dataRecords.piecesNo
       }
-      if (dataRecords.quesoname === 'Comiteco BA' && dataRecords.approvepord === 'Verdadero') {
+      if (dataRecords.cheeseName === 'Comiteco BA' && dataRecords.approveProd === 'Verdadero') {
         comitecoBa += dataRecords.piecesNo
       }
     })
