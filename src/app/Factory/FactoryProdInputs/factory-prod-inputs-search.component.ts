@@ -49,6 +49,6 @@ export class FactoryProdInputsSearch {
 
   searchRecords() {
     event.preventDefault();
-    this.dataHandlingSer.filterDataByDate(this.selectedCategory, this.selectedMonth, this.selectedYear);
+    console.log(this.dataHandlingSer.filterDataByDate(this.selectedCategory, this.selectedMonth, this.selectedYear))
   }
 };

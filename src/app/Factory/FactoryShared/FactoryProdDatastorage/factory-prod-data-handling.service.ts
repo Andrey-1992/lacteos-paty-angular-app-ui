@@ -5,6 +5,7 @@ import { DataStorageService } from "./factory-prod-datastorage.service";
 
 @Injectable({providedIn: 'root'})
 export class DataHandlingService {
+  filterData: any;
 
   constructor(private dataStorage: DataStorageService) {}
 
@@ -36,37 +37,26 @@ export class DataHandlingService {
     return filterData;
   }
 
-  filterDataByDate = (categoy: string, month: string, year: string) => {
-    console.log(categoy, month, year)
+  filterDataByDate = (selectedCategory: string, selectedMonth: string, selectedYear: string) => {
     this.dataStorage.getCheeseRecords()
     .subscribe(resData => {
-      resData.map((dataRecords: CheeseDataStructureModel) => {
-        if (dataRecords.cheeseName === 'Baraloso' && dataRecords.approveProd === 'Verdadero') {
-          baraloso.piecesNo += parseInt(dataRecords.piecesNo);
+      // console.log(resData)
+      this.filterData = resData.reduce((acc:any, dataRecords: CheeseDataStructureModel) => {
+      console.log(dataRecords)
+      const cheeseCategory = dataRecords.cheeseName;
+      if (resData) {
+        const yearData = dataRecords.dateIn.split('-')[0];
+        const monthData = dataRecords.dateIn.split('-')[1]
+        if (yearData === selectedYear && monthData === selectedMonth && selectedCategory === 'Todos' && dataRecords.cheeseStatus === 'Entrada') {
+          acc.push(dataRecords)
         }
-        if (dataRecords.cheeseName === 'Comiteco' && dataRecords.approveProd === 'Verdadero') {
-          comiteco.piecesNo += parseInt(dataRecords.piecesNo);
+        if (yearData === selectedYear && monthData === selectedMonth && selectedCategory === cheeseCategory && dataRecords.cheeseStatus === 'Entrada') {
+          acc.push(dataRecords)
         }
-        if (dataRecords.cheeseName === 'Comiteco AA' && dataRecords.approveProd === 'Verdadero') {
-          comitecoAa.piecesNo += parseInt(dataRecords.piecesNo);
-        }
-        if (dataRecords.cheeseName === 'Comiteco BA' && dataRecords.approveProd === 'Verdadero') {
-          comitecoBa.piecesNo += parseInt(dataRecords.piecesNo);
-        }
-      })
+      }
+        return acc;
+      }, [])
     })
-    // const dataFiltered = data.reduce((acc:any, dataRecords: any) => {
-    //   const cheeseCat = dataRecords.quesoname;
-    //   const yearData = dataRecords.datein.split('-')[0];
-    //   const monthData = dataRecords.datein.split('-')[1]
-    //   if (yearData === selectedYear && monthData === selectedMonth && selectedCategory === 'Todos' && dataRecords.quesostatus === 'Entrada') {
-    //     acc.push(dataRecords)
-    //   }
-    //   if (yearData === selectedYear && monthData === selectedMonth && selectedCategory === cheeseCat && dataRecords.quesostatus === 'Entrada') {
-    //     acc.push(dataRecords)
-    //   }
-    //   return acc;
-    // }, [])
-    // setFetchedRecords(dataFiltered);
+    // console.log(this.filterData);
   }
 }
