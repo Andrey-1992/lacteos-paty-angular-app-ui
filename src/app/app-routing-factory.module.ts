@@ -4,6 +4,7 @@ import { FactoryMenu } from "./Factory/factory-admin-menu.component";
 import { FactoryUserSelection } from "./Factory/factory-user-selection.component";
 import { FactoryAdminLogin } from "./Factory/FactoryAdmin/factory-admin-login.component";
 import { FactoryProdInputsMenu } from "./Factory/FactoryProdInputs/factory-prod-inputs-menu.component";
+import { FactoryProdInputsSearch } from "./Factory/FactoryProdInputs/factory-prod-inputs-search.component";
 import { FactoryProdMenu } from "./Factory/FactoryProdMenu/factory-prod-menu.component";
 import { FactoryProdOutputsMenu } from "./Factory/FactoryProdOutputs/factory-prod-outputs-menu.component";
 import { CreateCheeseDataInput } from "./Factory/FactoryShared/CheeseDataStructure/create-cheese-data-input";
@@ -18,11 +19,11 @@ const appRoutes: Routes = [
   {path: 'factory-prod', component: FactoryProdMenu},
   {path: 'factory-prod-inputs-menu', component: FactoryProdInputsMenu},
   {path: 'factory-prod-outputs-menu', component: FactoryProdOutputsMenu},
-  {path: 'factory-prod-inputs-create', component: CreateCheeseDataInput}
+  {path: 'factory-prod-inputs-create', component: CreateCheeseDataInput},
+  {path: 'factory-prod-inputs-search', component: FactoryProdInputsSearch}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingFactoryModule {};
-

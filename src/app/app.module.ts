@@ -14,6 +14,7 @@ import { FactoryDynamicMenus } from './Factory/FactoryShared/factory-dynamic-men
 import { ProductionVsFactoryComponent } from './production-vs-factory/production-vs-factory.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DataHandlingService } from './Factory/FactoryShared/FactoryProdDatastorage/factory-prod-data-handling.service';
+import { FactoryProdInputsSearch } from './Factory/FactoryProdInputs/factory-prod-inputs-search.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DataHandlingService } from './Factory/FactoryShared/FactoryProdDatastor
     FactoryProdMenu,
     FactoryProdInputsMenu,
     FactoryProdOutputsMenu,
-    CreateCheeseDataInput
+    CreateCheeseDataInput,
+    FactoryProdInputsSearch
   ],
   imports: [
     BrowserModule,

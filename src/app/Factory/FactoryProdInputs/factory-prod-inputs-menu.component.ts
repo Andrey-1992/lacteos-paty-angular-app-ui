@@ -22,7 +22,7 @@ export class FactoryProdInputsMenu {
     this.dynamicMenus = [
       {
         textToDisplay: 'Buscar Reporte', 
-        urlLink: '',
+        urlLink: '/factory-prod-inputs-search',
       },
       {
         textToDisplay: 'Crear Reporte', 
