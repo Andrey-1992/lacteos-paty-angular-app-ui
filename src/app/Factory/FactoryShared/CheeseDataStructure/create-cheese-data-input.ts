@@ -71,18 +71,11 @@ export class CreateCheeseDataInput {
       approveProd: 'Falso',
       loteNo: this.selectedLoteNo
     })
-    // console.log(
-    //   this.selectedCategory,
-    //   this.selectedRefrigerationType,
-    //   this.selectedLoteNo,
-    //   this.selectedPzNo,
-    //   this.selectedPotsNo,
-    //   this.selectedDate
-    // )
     this.isDisable = true;
   }
 
   getData() {
+    event.preventDefault();
     this.dataStorage.getCheeseRecords();
   }
 
