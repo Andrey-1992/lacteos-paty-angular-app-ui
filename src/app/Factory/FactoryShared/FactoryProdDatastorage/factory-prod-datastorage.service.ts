@@ -3,9 +3,11 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { CheeseDataStructureModel } from "../CheeseDataStructure/cheese-data-structure.model";
 
 @Injectable({providedIn: 'root'})
+
 export class DataStorageService {
+  constructor(private http: HttpClient) {}
 
   storeCheeseRecord(cheeseData: CheeseDataStructureModel) {
-
+    this.http.post()
   }
 }
