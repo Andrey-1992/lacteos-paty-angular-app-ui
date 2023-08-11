@@ -7,6 +7,13 @@ import { CheeseDataStructureModel } from "../CheeseDataStructure/cheese-data-str
 export class DataStorageService {
   constructor(private http: HttpClient) {}
 
+  getCheeseRecords() {
+    this.http.get('https://fabrica-produccion-database-default-rtdb.firebaseio.com/cheese-record.json')
+    .subscribe(resData => {
+      console.log(resData);
+    })
+  }
+
   storeCheeseRecord(cheeseData: CheeseDataStructureModel) {
     this.http.post('https://fabrica-produccion-database-default-rtdb.firebaseio.com/cheese-record.json', cheeseData)
     .subscribe(resData => {

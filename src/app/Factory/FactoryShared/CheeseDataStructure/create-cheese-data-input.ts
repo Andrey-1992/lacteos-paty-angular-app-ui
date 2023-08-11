@@ -53,7 +53,7 @@ export class CreateCheeseDataInput {
     this.selectedDate = e.target.value;
   }
   
-  fetchData() {
+  postData() {
     event.preventDefault();
     this.dataStorage.storeCheeseRecord({
       // id?: number,
@@ -80,6 +80,10 @@ export class CreateCheeseDataInput {
     //   this.selectedDate
     // )
     this.isDisable = true;
+  }
+
+  getData() {
+    this.dataStorage.getCheeseRecords();
   }
 
 }
