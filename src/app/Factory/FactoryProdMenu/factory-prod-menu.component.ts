@@ -14,10 +14,10 @@ export class FactoryProdMenu implements OnInit{
   constructor(private dataStorage: DataStorageService) {}
 
   ngOnInit(): void {
-    // this.dataStorage.getCheeseRecords()
-    // .subscribe(resData => {
-    //   this.filterCheeseDataByDate(resData);
-    // })
+    this.dataStorage.getCheeseRecords()
+    .subscribe(resData => {
+      this.filterCheeseDataByDate(resData);
+    })
   };
 
   cheeseUrl: string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU";

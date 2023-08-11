@@ -16,9 +16,9 @@ export class DataStorageService {
       }
       return postArray;
     }))
-    .subscribe(resData => {
-      console.log(resData);
-    })
+    // .subscribe(resData => {
+    //   console.log(resData);
+    // })
   }
 
   storeCheeseRecord(cheeseData: CheeseDataStructureModel) {
