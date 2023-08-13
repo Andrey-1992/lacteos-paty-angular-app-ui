@@ -9,7 +9,7 @@ import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/c
 
 export class FactoryProdInputsOverview  implements OnInit{
   @Input() filteredRecords: CheeseDataStructureModel = {};
-  @Output() detailView = new EventEmitter<string>();
+  @Output() detailView = new EventEmitter<boolean>();
   cleanedDate:string = '';
 
   ngOnInit(): void {
@@ -19,7 +19,7 @@ export class FactoryProdInputsOverview  implements OnInit{
 
   sendStatus = ():void => {
     event.preventDefault()
-    this.detailView.emit('Detail View');
+    this.detailView.emit(true);
     // changeViewStatus('detailedView', filteredRecords.id);
   }
 };

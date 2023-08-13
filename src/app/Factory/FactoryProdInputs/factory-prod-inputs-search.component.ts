@@ -53,8 +53,7 @@ export class FactoryProdInputsSearch {
     this.filterDataByDate = this.dataHandlingService.filterDataByDate(this.selectedCategory, this.selectedMonth, this.selectedYear)
   }
 
-  setDetailView(newItem: string) {
-    this.detailView = true;
-    // console.log(this.detailView)
+  setDetailView(viewInfo: boolean) {
+    this.detailView = viewInfo;
   }
 };
