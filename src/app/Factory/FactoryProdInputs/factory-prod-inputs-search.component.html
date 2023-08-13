@@ -18,7 +18,7 @@
           {{month.Name}}
       </option>
     </select>
-    <select ngClass="select-year-search" (change)="getSelectedMonth($event)">
+    <select ngClass="select-year-search" (change)="getSelectedYear($event)">
       <option 
         ngClass="option-date-style"
         *ngFor="let year of yearSelection" 
