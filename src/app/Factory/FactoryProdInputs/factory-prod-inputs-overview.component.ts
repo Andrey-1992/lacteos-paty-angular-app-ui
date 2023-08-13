@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/cheese-data-structure.model';
 
 @Component({
   selector: 'app-overview-cheese-input',
@@ -7,9 +8,11 @@ import { Component } from '@angular/core';
 })
 
 export class FactoryProdInputsOverview {
+  @Input() filteredRecords: any = ''; // decorate the property with @Input()
+
   sendStatus = ():void => {
     event.preventDefault()
-    console.log('testiong b utton')
+    console.log('testiong button')
     // changeViewStatus('detailedView', filteredRecords.id);
   }
 };

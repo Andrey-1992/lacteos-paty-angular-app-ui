@@ -33,7 +33,7 @@
     <!--This DIV will define if is an overview or detailview -->
     <div> 
       <div ngClass="cheese-invenroty-card" *ngFor="let data of filterDataByDate">
-        <h1>{{data.cheeseName}}</h1>
+        <app-overview-cheese-input [filteredRecords]="filterDataByDate"></app-overview-cheese-input>
       </div>
     </div>
   </div>

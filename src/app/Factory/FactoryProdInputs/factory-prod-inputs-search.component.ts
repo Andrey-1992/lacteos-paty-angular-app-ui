@@ -41,7 +41,6 @@ export class FactoryProdInputsSearch {
 
   getSelectedMonth(e) {
     this.selectedMonth = e.target.value;
-    console.log()
   }
 
   getSelectedYear(e) {
