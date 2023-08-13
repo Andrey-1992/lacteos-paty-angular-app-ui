@@ -8,7 +8,7 @@ import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/c
 })
 
 export class FactoryProdInputsOverview {
-  @Input() filteredRecords: any = ''; // decorate the property with @Input()
+  @Input() filteredRecords: any = {}; // decorate the property with @Input()
 
   sendStatus = ():void => {
     event.preventDefault()

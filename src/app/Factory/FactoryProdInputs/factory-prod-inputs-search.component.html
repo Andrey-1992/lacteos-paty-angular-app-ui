@@ -31,12 +31,12 @@
   </form>
   <div *ngIf=filterDataByDate.length>
     <!--This DIV will define if is an overview or detailview -->
+    <!-- {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>} -->
     <div> 
       <div ngClass="cheese-invenroty-card" *ngFor="let data of filterDataByDate">
         <app-overview-cheese-input [filteredRecords]="filterDataByDate"></app-overview-cheese-input>
       </div>
     </div>
   </div>
-  <!-- {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>} -->
     <p ngClass='go-back-menu-entradas-prod-admin-busqueda' routerLinkActive="active" routerLink="/factory-prod-inputs-menu">Menu Anterior</p>
 </div>

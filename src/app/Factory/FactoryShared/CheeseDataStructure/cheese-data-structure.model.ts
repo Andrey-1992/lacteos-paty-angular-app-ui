@@ -13,6 +13,7 @@ export class CheeseDataStructureModel {
     public dateOut?: string ,
     public price?: number,
     public approveProd?: string,
-    public loteNo?: number
+    public loteNo?: number,
+    public refrigerationType?: number
   ) {}
 };

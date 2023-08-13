@@ -3,16 +3,16 @@
     <div className="crear-reporte-queso-marco">
       <img className="cheese-piece-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU" alt="Imagen de Pieza de Queso" width="200" height="200">
       <h3 className="crear-reporte-queso-texto">Tipo de Queso:</h3>
-      <h3>{{filteredRecords.quesoname}}</h3>
+      <h3>{{filteredRecords.cheeseName}}</h3>
       <h3 className="crear-reporte-queso-texto">Fecha de Entrada:</h3>
       <!-- <h3>{cleanedDate}</h3> -->
       <h4>Entrada Aprobada: </h4>
-      <!-- <h4>{filteredRecords.approvepord}</h4> -->
+      <h4>{{filteredRecords.approveProd}}</h4>
       <h4 className="crear-reporte-queso-texto">Refrigeracion:</h4>
-      <!-- <h4>{filteredRecords.refrigerationtype}</h4>
-      <h4>No Piezas: {filteredRecords.nopieces}</h4>
-      <h4>No Olladas: {filteredRecords.holladas}</h4>
-      <h4>No Lote: {filteredRecords.lotenum}</h4> -->
+      <h4>{{filteredRecords.refrigerationType}}</h4>
+      <h4>No Piezas: {{filteredRecords.piecesNo}}</h4>
+      <h4>No Olladas: {{filteredRecords.potsNo}}</h4>
+      <h4>No Lote: {{filteredRecords.loteNo}}</h4>
       <button className='read-prod-records-btn' (click)="sendStatus()">Editar Reporte</button>
     </div>
   </form>
