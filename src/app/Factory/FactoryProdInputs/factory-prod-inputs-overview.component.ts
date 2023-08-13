@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/cheese-data-structure.model';
 
 @Component({
@@ -8,17 +8,18 @@ import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/c
 })
 
 export class FactoryProdInputsOverview  implements OnInit{
-  @Input() filteredRecords: any = {};
+  @Input() filteredRecords: CheeseDataStructureModel = {};
+  @Output() newItemEvent = new EventEmitter<string>();
   cleanedDate:string = '';
-  
+
   ngOnInit(): void {
     // console.log(this.filteredRecords)
       this.cleanedDate = this.filteredRecords.dateIn.slice(0, 10).split('-').join(' / ')
   }
 
-  sendStatus = ():void => {
+  sendStatus = (value: string):void => {
     event.preventDefault()
-    console.log('testiong button')
+    this.newItemEvent.emit(value);
     // changeViewStatus('detailedView', filteredRecords.id);
   }
 };
