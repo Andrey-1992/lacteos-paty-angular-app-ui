@@ -12,33 +12,28 @@
             {{category.Name}}
         </option>
       </select>
-      <h3 ngClass="crear-reporte-queso-texto">Refrigeracion:</h3>
+      <h3 ngClass="crear-reporte-queso-texto">Refrigeracion: {{selectedRefrigeration}}</h3>
       <select ngClass="cheese-categorie-" (change)="getSelectedRefrigeration($event)">
         <option 
           ngClass="option-choice-style"
           *ngFor="let refrigeration of refrigerationCategory" 
-          [value]="refrigeration.Value" [selected]="refrigeration.Name"
+          [value]=selectedRefrigeration
         >
             {{refrigeration.Name}}
         </option>
       </select>
-      <!-- <select ngClass="cheese-categorie-" value={selectedRefrigeration} onChange={(event) => setSelectedRefrigeration(event.target.value)}>
-        {refrigerationCategory.map(list => (
-          <option ngClass="option-choice-style" value={list.Value}>
-            {list.Name}
-        </option>
-      ))}
-      </select> -->
       <h3 ngClass="crear-reporte-queso-texto">Fecha Entrada: {{cleanedDate}}</h3>
-      <!-- <h3>Cambiar: <input type="date" ngClass="crear-reporte-queso-date" onChange={(event) => setSelectedDate(event.target.value)}></input></h3> -->
+      <h3>Cambiar: <input type="date" ngClass="crear-reporte-queso-date" (change)="getSelectedDate($event)"></h3>
       <h4>Entrada Aprobada:</h4>
-      <!-- <select ngClass="cheese-categorie-" value={selectedApproved} onChange={(event) => setSelectedApproved(event.target.value)}>
-        {cheeseStatus.map(list => (
-          <option ngClass="option-choice-style" value={list.Value}>
-            {list.Name}
-          </option>
-        ))}
-      </select> -->
+      <select ngClass="cheese-categorie-" (change)="getSelectedStatus($event)">
+        <option 
+          ngClass="option-choice-style"
+          *ngFor="let status of cheeseStatus" 
+          [value]=selectedStatus
+        >
+            {{status.Name}}
+        </option>
+      </select>
       <!-- <h4>No Piezas: <input type="number" ngClass="crear-reporte-queso-num" onChange={(event) => setSelectedPieces(event.target.value)} value={selectedPieces}></input></h4> -->
       <!-- <h4>No Olladas: <input type="number" ngClass="crear-reporte-queso-num" onChange={(event) => setSelectedOlladas(event.target.value)} value={selectedOlladas}></input></h4> -->
       <!-- <h4>No Lote: <input type="text" ngClass="crear-reporte-queso-num" onChange={(event) => setNumLote(event.target.value)} value={numLote}></input></h4> -->
