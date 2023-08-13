@@ -9,17 +9,17 @@ import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/c
 
 export class FactoryProdInputsOverview  implements OnInit{
   @Input() filteredRecords: CheeseDataStructureModel = {};
-  @Output() newItemEvent = new EventEmitter<string>();
+  @Output() detailView = new EventEmitter<string>();
   cleanedDate:string = '';
 
   ngOnInit(): void {
-    // console.log(this.filteredRecords)
-      this.cleanedDate = this.filteredRecords.dateIn.slice(0, 10).split('-').join(' / ')
+    console.log(this.filteredRecords)
+    this.cleanedDate = this.filteredRecords.dateIn.slice(0, 10).split('-').join(' / ')
   }
 
   sendStatus = ():void => {
     event.preventDefault()
-    this.newItemEvent.emit('Detail View');
+    this.detailView.emit('Detail View');
     // changeViewStatus('detailedView', filteredRecords.id);
   }
 };

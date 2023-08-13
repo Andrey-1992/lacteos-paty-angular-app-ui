@@ -32,9 +32,14 @@
   <div *ngIf=filterDataByDate.length>
     <!--This DIV will define if is an overview or detailview -->
     <!-- {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>} -->
-    <div> 
+    <div *ngIf=!detailView> 
       <div ngClass="cheese-invenroty-card" *ngFor="let data of filterDataByDate">
-        <app-overview-cheese-input [filteredRecords]="data" (newItemEvent)="addItem($event)"></app-overview-cheese-input>
+        <app-overview-cheese-input [filteredRecords]="data" (detailView)="setDetailView($event)"></app-overview-cheese-input>
+      </div>
+    </div>
+    <div *ngIf=detailView>  
+      <div>
+        <h1>TWRETWERTWRE</h1>
       </div>
     </div>
   </div>
