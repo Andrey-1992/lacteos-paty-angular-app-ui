@@ -15,6 +15,7 @@ import { ProductionVsFactoryComponent } from './production-vs-factory/production
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DataHandlingService } from './Factory/FactoryShared/FactoryProdDatastorage/factory-prod-data-handling.service';
 import { FactoryProdInputsSearch } from './Factory/FactoryProdInputs/factory-prod-inputs-search.component';
+import { FactoryProdInputsOverview } from './Factory/FactoryProdInputs/factory-prod-inputs-overview.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FactoryProdInputsSearch } from './Factory/FactoryProdInputs/factory-pro
     FactoryProdInputsMenu,
     FactoryProdOutputsMenu,
     CreateCheeseDataInput,
-    FactoryProdInputsSearch
+    FactoryProdInputsSearch,
+    FactoryProdInputsOverview
   ],
   imports: [
     BrowserModule,
