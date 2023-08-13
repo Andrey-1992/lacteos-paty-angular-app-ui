@@ -34,7 +34,7 @@
     <!-- {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>} -->
     <div> 
       <div ngClass="cheese-invenroty-card" *ngFor="let data of filterDataByDate">
-        <app-overview-cheese-input [filteredRecords]="filterDataByDate"></app-overview-cheese-input>
+        <app-overview-cheese-input [filteredRecords]="data"></app-overview-cheese-input>
       </div>
     </div>
   </div>

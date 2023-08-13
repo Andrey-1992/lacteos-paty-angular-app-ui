@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/cheese-data-structure.model';
 
 @Component({
@@ -7,8 +7,14 @@ import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/c
   styleUrls: ['./factory-prod-inputs-overview.component.css']
 })
 
-export class FactoryProdInputsOverview {
-  @Input() filteredRecords: any = {}; // decorate the property with @Input()
+export class FactoryProdInputsOverview  implements OnInit{
+  @Input() filteredRecords: any = {};
+  cleanedDate:string = '';
+  
+  ngOnInit(): void {
+    // console.log(this.filteredRecords)
+      this.cleanedDate = this.filteredRecords.dateIn.slice(0, 10).split('-').join(' / ')
+  }
 
   sendStatus = ():void => {
     event.preventDefault()
