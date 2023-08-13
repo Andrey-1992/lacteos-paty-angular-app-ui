@@ -14,6 +14,6 @@ export class CheeseDataStructureModel {
     public price?: number,
     public approveProd?: string,
     public loteNo?: number,
-    public refrigerationType?: number
+    public refrigerationType?: string
   ) {}
 };

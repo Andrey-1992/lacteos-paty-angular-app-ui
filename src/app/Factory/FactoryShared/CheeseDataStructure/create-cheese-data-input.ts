@@ -68,7 +68,8 @@ export class CreateCheeseDataInput {
       dateOut: '',
       price: 0,
       approveProd: 'Verdadero',
-      loteNo: this.selectedLoteNo
+      loteNo: this.selectedLoteNo,
+      refrigerationType: this.selectedRefrigerationType
     })
     this.isDisable = true;
   }
