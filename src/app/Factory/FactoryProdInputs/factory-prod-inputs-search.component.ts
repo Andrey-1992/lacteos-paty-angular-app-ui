@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/cheese-data-structure.model';
 import { FactoryDynamicMenusModel } from '../FactoryShared/factory-dynamic-menus.model';
 import { DataHandlingService } from '../FactoryShared/FactoryProdDatastorage/factory-prod-data-handling.service';
 
@@ -16,6 +17,7 @@ export class FactoryProdInputsSearch {
   selectedYear: string;
   filterDataByDate = [];
   detailView: boolean = false;
+  selectedRecord: CheeseDataStructureModel;
 
   cheeseCategory = [
     {Name:'Todos los quesos', Value:'Todos'}, {Name:'Baraloso', Value:'Baraloso'}, 
@@ -55,5 +57,10 @@ export class FactoryProdInputsSearch {
 
   setDetailView(viewInfo: boolean) {
     this.detailView = viewInfo;
+  }
+
+  setSelectedRecord(record: CheeseDataStructureModel) {
+    this.selectedRecord = record;
+    console.log(this.selectedRecord)
   }
 };
