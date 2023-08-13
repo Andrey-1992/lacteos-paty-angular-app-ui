@@ -13,6 +13,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
   @Output() overview = new EventEmitter<boolean>();
 
   selectedCategory: string;
+  selectedRefrigeration: string;
   cleanedDate:string = '';
 
   cheeseCategory = [
@@ -34,10 +35,15 @@ export class FactoryProdInputsDetailView  implements OnInit{
   ngOnInit(): void {
     this.cleanedDate = this.filteredRecords.dateIn.slice(0, 10).split('-').join(' / ');
     this.selectedCategory = this.filteredRecords.cheeseName;
+    this.selectedRefrigeration = this.filteredRecords.refrigerationType;
   }
 
   getSelectedCategory(e) {
     this.selectedCategory = e.target.value;
+  }
+
+  getSelectedRefrigeration(e) {
+    this.selectedRefrigeration = e.target.value;
   }
 
   sendViewStatus = ():void => {

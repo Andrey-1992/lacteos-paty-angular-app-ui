@@ -12,14 +12,16 @@
             {{category.Name}}
         </option>
       </select>
-      <!-- <select ngClass="cheese-categorie-" value={selectedCategory} onChange={(event) => setSelectedCategory(event.target.value)}>
-        {cheeseCategory.map(list => (
-          <option ngClass="option-choice-style" value={list.Value}>
-            {list.Name}
-          </option>
-        ))}
-      </select> -->
       <h3 ngClass="crear-reporte-queso-texto">Refrigeracion:</h3>
+      <select ngClass="cheese-categorie-" (change)="getSelectedRefrigeration($event)">
+        <option 
+          ngClass="option-choice-style"
+          *ngFor="let refrigeration of refrigerationCategory" 
+          [value]="refrigeration.Value" [selected]="refrigeration.Name"
+        >
+            {{refrigeration.Name}}
+        </option>
+      </select>
       <!-- <select ngClass="cheese-categorie-" value={selectedRefrigeration} onChange={(event) => setSelectedRefrigeration(event.target.value)}>
         {refrigerationCategory.map(list => (
           <option ngClass="option-choice-style" value={list.Value}>
