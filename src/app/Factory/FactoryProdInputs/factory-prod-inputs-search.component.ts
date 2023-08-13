@@ -9,7 +9,7 @@ import { DataHandlingService } from '../FactoryShared/FactoryProdDatastorage/fac
 })
 
 export class FactoryProdInputsSearch {
-  constructor(private dataHandlingSer: DataHandlingService) {}
+  constructor(private dataHandlingService: DataHandlingService) {}
 
   selectedCategory: string;
   selectedMonth: string;
@@ -50,7 +50,8 @@ export class FactoryProdInputsSearch {
 
   searchRecords() {
     event.preventDefault();
-    console.log(this.dataHandlingSer.filterDataByDate(this.selectedCategory, this.selectedMonth, this.selectedYear))
+    this.filterDataByDate = this.dataHandlingService.filterDataByDate(this.selectedCategory, this.selectedMonth, this.selectedYear)
+    // console.log(this.dataHandlingSer.filterDataByDate(this.selectedCategory, this.selectedMonth, this.selectedYear))
 
   }
 };

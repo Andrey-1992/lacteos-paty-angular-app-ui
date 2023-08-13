@@ -29,6 +29,14 @@
     </select>
     <button ngClass='read-prod-records-btn' (click)="searchRecords()">Buscar Reportes</button>
   </form>
+  <div *ngIf=filterDataByDate.length>
+    <!--This DIV will define if is an overview or detailview -->
+    <div> 
+      <div ngClass="cheese-invenroty-card" *ngFor="let data of filterDataByDate">
+        <h1>{{data.cheeseName}}</h1>
+      </div>
+    </div>
+  </div>
   <!-- {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>} -->
     <p ngClass='go-back-menu-entradas-prod-admin-busqueda' routerLinkActive="active" routerLink="/factory-prod-inputs-menu">Menu Anterior</p>
 </div>
