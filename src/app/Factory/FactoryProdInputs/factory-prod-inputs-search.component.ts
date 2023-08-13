@@ -15,6 +15,7 @@ export class FactoryProdInputsSearch {
   selectedMonth: string;
   selectedYear: string;
   filterDataByDate = [];
+  items
 
   cheeseCategory = [
     {Name:'Todos los quesos', Value:'Todos'}, {Name:'Baraloso', Value:'Baraloso'}, 
@@ -50,7 +51,10 @@ export class FactoryProdInputsSearch {
   searchRecords() {
     event.preventDefault();
     this.filterDataByDate = this.dataHandlingService.filterDataByDate(this.selectedCategory, this.selectedMonth, this.selectedYear)
-    // console.log(this.dataHandlingSer.filterDataByDate(this.selectedCategory, this.selectedMonth, this.selectedYear))
+  }
 
+  addItem(newItem: string) {
+    this.items = newItem;
+    console.log(this.items)
   }
 };

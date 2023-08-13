@@ -17,9 +17,9 @@ export class FactoryProdInputsOverview  implements OnInit{
       this.cleanedDate = this.filteredRecords.dateIn.slice(0, 10).split('-').join(' / ')
   }
 
-  sendStatus = (value: string):void => {
+  sendStatus = ():void => {
     event.preventDefault()
-    this.newItemEvent.emit(value);
+    this.newItemEvent.emit('Detail View');
     // changeViewStatus('detailedView', filteredRecords.id);
   }
 };
