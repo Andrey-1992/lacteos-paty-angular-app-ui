@@ -3,6 +3,15 @@
     <div ngClass="crear-reporte-queso-marco">
       <img ngClass="cheese-piece-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU" alt="Imagen de Pieza de Queso" width="200" height="200">
       <h3 ngClass="crear-reporte-queso-texto">Tipo de Queso: {{filteredRecords.cheeseName}}</h3>
+      <select ngClass="cheese-categorie-" (change)="getSelectedCategory($event)">
+        <option 
+          ngClass="option-choice-style"
+          *ngFor="let category of cheeseCategory" 
+          [value]="category.Value" [selected]="category.Name"
+        >
+            {{category.Name}}
+        </option>
+      </select>
       <!-- <select ngClass="cheese-categorie-" value={selectedCategory} onChange={(event) => setSelectedCategory(event.target.value)}>
         {cheeseCategory.map(list => (
           <option ngClass="option-choice-style" value={list.Value}>

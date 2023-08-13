@@ -11,6 +11,8 @@ export class FactoryProdInputsDetailView  implements OnInit{
 
   @Input() filteredRecords: CheeseDataStructureModel = {};
   @Output() overview = new EventEmitter<boolean>();
+
+  selectedCategory: string;
   cleanedDate:string = '';
 
   cheeseCategory = [
@@ -30,7 +32,12 @@ export class FactoryProdInputsDetailView  implements OnInit{
 
 
   ngOnInit(): void {
-    this.cleanedDate = this.filteredRecords.dateIn.slice(0, 10).split('-').join(' / ')
+    this.cleanedDate = this.filteredRecords.dateIn.slice(0, 10).split('-').join(' / ');
+    this.selectedCategory = this.filteredRecords.cheeseName;
+  }
+
+  getSelectedCategory(e) {
+    this.selectedCategory = e.target.value;
   }
 
   sendViewStatus = ():void => {
