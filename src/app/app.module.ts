@@ -16,6 +16,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DataHandlingService } from './Factory/FactoryShared/FactoryProdDatastorage/factory-prod-data-handling.service';
 import { FactoryProdInputsSearch } from './Factory/FactoryProdInputs/factory-prod-inputs-search.component';
 import { FactoryProdInputsOverview } from './Factory/FactoryProdInputs/factory-prod-inputs-overview.component';
+import { FactoryProdInputsDetailView } from './Factory/FactoryProdInputs/factory-prod-inputs-detail-view.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FactoryProdInputsOverview } from './Factory/FactoryProdInputs/factory-p
     FactoryProdOutputsMenu,
     CreateCheeseDataInput,
     FactoryProdInputsSearch,
-    FactoryProdInputsOverview
+    FactoryProdInputsOverview,
+    FactoryProdInputsDetailView
   ],
   imports: [
     BrowserModule,
