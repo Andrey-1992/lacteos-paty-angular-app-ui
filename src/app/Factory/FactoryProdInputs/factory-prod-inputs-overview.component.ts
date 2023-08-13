@@ -14,7 +14,7 @@ export class FactoryProdInputsOverview  implements OnInit{
   cleanedDate:string = '';
 
   ngOnInit(): void {
-    console.log(this.filteredRecords)
+    // console.log(this.filteredRecords)
     this.cleanedDate = this.filteredRecords.dateIn.slice(0, 10).split('-').join(' / ')
   }
 
@@ -22,6 +22,5 @@ export class FactoryProdInputsOverview  implements OnInit{
     event.preventDefault()
     this.detailView.emit(true);
     this.selectedRecord.emit(this.filteredRecords);
-    // changeViewStatus('detailedView', filteredRecords.id);
   }
 };

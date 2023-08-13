@@ -30,8 +30,6 @@
     <button ngClass='read-prod-records-btn' (click)="searchRecords()">Buscar Reportes</button>
   </form>
   <div *ngIf=filterDataByDate.length>
-    <!--This DIV will define if is an overview or detailview -->
-    <!-- {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>} -->
     <div *ngIf=!detailView> 
       <div ngClass="cheese-invenroty-card" *ngFor="let data of filterDataByDate">
         <app-overview-cheese-input 
