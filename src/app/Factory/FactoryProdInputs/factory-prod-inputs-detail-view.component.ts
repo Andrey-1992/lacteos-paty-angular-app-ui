@@ -41,6 +41,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
     this.selectedRefrigeration = this.filteredRecords.refrigerationType;
     this.selectedStatus = this.filteredRecords.cheeseStatus;
     this.selectedPiecesNo = this.filteredRecords.piecesNo;
+    this.selectedDate = this.filteredRecords.dateIn;
   }
 
   getSelectedCategory(e) {
