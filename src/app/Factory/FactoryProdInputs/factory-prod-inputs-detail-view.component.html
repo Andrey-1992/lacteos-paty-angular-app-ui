@@ -34,9 +34,9 @@
             {{status.Name}}
         </option>
       </select>
-      <!-- <h4>No Piezas: <input type="number" ngClass="crear-reporte-queso-num" onChange={(event) => setSelectedPieces(event.target.value)} value={selectedPieces}></input></h4> -->
       <h4>No Piezas: <input type="number"  [value]=selectedPiecesNo ngClass="crear-reporte-queso-num" (change)="getSelectedPiecesNo($event)" ></h4>
       <!-- <h4>No Olladas: <input type="number" ngClass="crear-reporte-queso-num" onChange={(event) => setSelectedOlladas(event.target.value)} value={selectedOlladas}></input></h4> -->
+      <h4>No Olladas: <input type="number"  [value]=selectedPotsNo ngClass="crear-reporte-queso-num" (change)="getSelectedPotsNo($event)" ></h4>
       <!-- <h4>No Lote: <input type="text" ngClass="crear-reporte-queso-num" onChange={(event) => setNumLote(event.target.value)} value={numLote}></input></h4> -->
       <!-- <h4>Precio: $<input type="number" ngClass="crear-reporte-queso-num" onChange={(event) => setSelectedPrice(event.target.value)} value={selectedPrice}></input></h4> -->
       <br>
