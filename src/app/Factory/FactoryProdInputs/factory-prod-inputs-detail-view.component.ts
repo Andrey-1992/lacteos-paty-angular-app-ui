@@ -16,7 +16,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
   selectedRefrigeration: string;
   cleanedDate:string;
   selectedDate: string;
-  selectedStatus: string;
+  selectedApprovedProd: string;
   selectedPiecesNo: number;
   selectedPotsNo: number;
   selectedLoteNo: number;
@@ -42,7 +42,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
     this.cleanedDate = this.filteredRecords.dateIn.slice(0, 10).split('-').join(' / ');
     this.selectedCategory = this.filteredRecords.cheeseName;
     this.selectedRefrigeration = this.filteredRecords.refrigerationType;
-    this.selectedStatus = this.filteredRecords.cheeseStatus;
+    this.selectedApprovedProd = this.filteredRecords.approveProd;
     this.selectedDate = this.filteredRecords.dateIn;
     this.selectedPiecesNo = this.filteredRecords.piecesNo;
     this.selectedPotsNo = this.filteredRecords.potsNo;
@@ -63,7 +63,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
   }
 
   getSelectedStatus(e) {
-    this.selectedStatus = e.target.value;
+    this.selectedApprovedProd = e.target.value;
   }
 
   getSelectedPiecesNo(e) {
