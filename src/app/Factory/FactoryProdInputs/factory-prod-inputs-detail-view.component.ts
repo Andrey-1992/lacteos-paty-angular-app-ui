@@ -19,6 +19,8 @@ export class FactoryProdInputsDetailView  implements OnInit{
   selectedStatus: string;
   selectedPiecesNo: number;
   selectedPotsNo: number;
+  selectedLoteNo: number;
+  selectedPrice: number;
 
   cheeseCategory = [
     {Name:'Selecione Categoria', Value:''}, 
@@ -44,6 +46,8 @@ export class FactoryProdInputsDetailView  implements OnInit{
     this.selectedDate = this.filteredRecords.dateIn;
     this.selectedPiecesNo = this.filteredRecords.piecesNo;
     this.selectedPotsNo = this.filteredRecords.potsNo;
+    this.selectedLoteNo = this.filteredRecords.loteNo;
+    this.selectedPrice = this.filteredRecords.price;
   }
 
   getSelectedCategory(e) {
@@ -68,6 +72,14 @@ export class FactoryProdInputsDetailView  implements OnInit{
 
   getSelectedPotsNo(e) {
     this.selectedPotsNo = e.target.value;
+  }
+
+  getSelectedLoteNo(e) {
+    this.selectedLoteNo = e.target.value;
+  }
+
+  getSelectedPrice(e) {
+    this.selectedPrice = e.target.value;
   }
 
   sendViewStatus = ():void => {
