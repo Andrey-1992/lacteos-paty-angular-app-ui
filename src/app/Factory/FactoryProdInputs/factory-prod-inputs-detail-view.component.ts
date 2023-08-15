@@ -17,6 +17,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
   cleanedDate:string;
   selectedDate: string;
   selectedStatus: string;
+  selectedPiecesNo: number;
 
   cheeseCategory = [
     {Name:'Selecione Categoria', Value:''}, 
@@ -55,6 +56,10 @@ export class FactoryProdInputsDetailView  implements OnInit{
 
   getSelectedStatus(e) {
     this.selectedStatus = e.target.value;
+  }
+
+  getSelectedPiecesNo(e) {
+    this.selectedPiecesNo = e.target.value;
   }
 
   sendViewStatus = ():void => {
