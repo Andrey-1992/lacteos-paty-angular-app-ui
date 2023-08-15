@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/cheese-data-structure.model';
+import { DataStorageService } from '../FactoryShared/FactoryProdDatastorage/factory-prod-datastorage.service';
 
 @Component({
   selector: 'app-detail-view-cheese-input',
@@ -8,6 +9,8 @@ import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/c
 })
 
 export class FactoryProdInputsDetailView  implements OnInit{
+  constructor(private dataStorage: DataStorageService) {}
+
 
   @Input() filteredRecords: CheeseDataStructureModel = {};
   @Output() overview = new EventEmitter<boolean>();
@@ -34,7 +37,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
   ];
 
   cheeseStatus = [
-    {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}
+    {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}, {Name:'Nueva Seleccion', Value:''}
   ];
 
 
@@ -85,5 +88,10 @@ export class FactoryProdInputsDetailView  implements OnInit{
   sendViewStatus = ():void => {
     event.preventDefault()
     this.overview.emit(false);
+  }
+
+  callServer() {
+    event.preventDefault()  
+    this.dataStorage.getCheeseRecords
   }
 };

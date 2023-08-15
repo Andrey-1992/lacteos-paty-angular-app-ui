@@ -20,18 +20,19 @@ export class DataHandlingService {
     this.dataStorage.getCheeseRecords()
     .subscribe(resData => {
       resData.map((dataRecords: CheeseDataStructureModel) => {
-        if (dataRecords.cheeseName === 'Baraloso' && dataRecords.approveProd === 'Verdadero') {
-          baraloso.piecesNo += parseInt(dataRecords.piecesNo);
-        }
-        if (dataRecords.cheeseName === 'Comiteco' && dataRecords.approveProd === 'Verdadero') {
-          comiteco.piecesNo += parseInt(dataRecords.piecesNo);
-        }
-        if (dataRecords.cheeseName === 'Comiteco AA' && dataRecords.approveProd === 'Verdadero') {
-          comitecoAa.piecesNo += parseInt(dataRecords.piecesNo);
-        }
-        if (dataRecords.cheeseName === 'Comiteco BA' && dataRecords.approveProd === 'Verdadero') {
-          comitecoBa.piecesNo += parseInt(dataRecords.piecesNo);
-        }
+        // if (dataRecords.cheeseName === 'Baraloso' && dataRecords.approveProd === 'Verdadero') {
+        //   baraloso.piecesNo += parseInt(dataRecords.piecesNo);
+        // }
+        // if (dataRecords.cheeseName === 'Comiteco' && dataRecords.approveProd === 'Verdadero') {
+        //   comiteco.piecesNo += parseInt(dataRecords.piecesNo);
+        // }
+        // if (dataRecords.cheeseName === 'Comiteco AA' && dataRecords.approveProd === 'Verdadero') {
+        //   comitecoAa.piecesNo += parseInt(dataRecords.piecesNo);
+        // }
+        // if (dataRecords.cheeseName === 'Comiteco BA' && dataRecords.approveProd === 'Verdadero') {
+        //   comitecoBa.piecesNo += parseInt(dataRecords.piecesNo);
+        // }
+        console.log(dataRecords)
       })
     })
     filterData.push(baraloso, comiteco, comitecoAa, comitecoBa);
