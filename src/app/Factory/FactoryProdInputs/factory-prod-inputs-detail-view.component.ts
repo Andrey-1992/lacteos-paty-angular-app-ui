@@ -22,10 +22,10 @@ export class FactoryProdInputsDetailView  implements OnInit{
   selectedLoteNo: number;
   selectedPrice: number;
 
-  cheeseCategory = [
-    {Name:'Selecione Categoria', Value:''}, 
+  cheeseCategory = [ 
     {Name:'Baraloso', Value:'Baraloso'}, {Name:'Comiteco', Value:'Comiteco'}, 
-    {Name:'Comiteco BA', Value:'Comiteco BA'}, {Name:'Comiteco AA', Value:'Comiteco AA'}
+    {Name:'Comiteco BA', Value:'Comiteco BA'}, {Name:'Comiteco AA', Value:'Comiteco AA'},
+    {Name:'Selecione Categoria', Value:''}
   ];
 
   refrigerationCategory = [

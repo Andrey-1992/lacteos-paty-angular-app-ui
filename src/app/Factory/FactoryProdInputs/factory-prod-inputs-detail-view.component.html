@@ -3,7 +3,7 @@
     <div ngClass="crear-reporte-queso-marco">
       <img ngClass="cheese-piece-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU" alt="Imagen de Pieza de Queso" width="200" height="200">
       <h3 ngClass="crear-reporte-queso-texto">Tipo de Queso: {{filteredRecords.cheeseName}}</h3>
-      <select ngClass="cheese-categorie-" [value]=selectedCategory (change)="getSelectedCategory($event)">
+      <h5>Cambiar:  <select ngClass="cheese-categorie-" [value]=selectedCategory (change)="getSelectedCategory($event)">
         <option 
           ngClass="option-choice-style"
           *ngFor="let category of cheeseCategory" 
@@ -11,9 +11,9 @@
         >
             {{category.Name}}
         </option>
-      </select>
+      </select></h5>
       <h3 ngClass="crear-reporte-queso-texto">Refrigeracion: {{filteredRecords.refrigerationType}}</h3>
-      <select ngClass="cheese-categorie-" [value]=selectedRefrigeration (change)="getSelectedRefrigeration($event)">
+      <h5>Cambiar:  <select ngClass="cheese-categorie-" [value]=selectedRefrigeration (change)="getSelectedRefrigeration($event)">
         <option 
           ngClass="option-choice-style"
           [value]=selectedRefrigeration
@@ -21,11 +21,11 @@
         >
             {{refrigeration.Name}}
         </option>
-      </select>
+      </select></h5>
       <h3 ngClass="crear-reporte-queso-texto">Fecha Entrada:</h3>
-      <h3>Cambiar: <input type="date" [value]=selectedDate ngClass="crear-reporte-queso-date" (change)="getSelectedDate($event)"></h3>
+      <input type="date" [value]=selectedDate ngClass="crear-reporte-queso-date" (change)="getSelectedDate($event)">
       <h4>Entrada Aprobada: {{selectedApprovedProd }}</h4>
-      <select ngClass="cheese-categorie-" (change)="getSelectedStatus($event)">
+      <h5>Cambiar:  <select ngClass="cheese-categorie-" (change)="getSelectedStatus($event)">
         <option 
           ngClass="option-choice-style"
           *ngFor="let status of cheeseStatus" 
@@ -33,7 +33,7 @@
         >
             {{status.Name}}
         </option>
-      </select>
+      </select></h5>
       <h4>No Piezas: <input type="number"  [value]=selectedPiecesNo ngClass="crear-reporte-queso-num" (change)="getSelectedPiecesNo($event)" ></h4>
       <h4>No Olladas: <input type="number"  [value]=selectedPotsNo ngClass="crear-reporte-queso-num" (change)="getSelectedPotsNo($event)" ></h4>
       <h4>No Lote: <input type="number"  [value]=selectedLoteNo ngClass="crear-reporte-queso-num" (change)="getSelectedLoteNo($event)" ></h4>
