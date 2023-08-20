@@ -20,6 +20,7 @@ export class DataHandlingService {
     this.dataStorage.getCheeseRecords()
     .subscribe(resData => {
       resData.map((dataRecords: CheeseDataStructureModel) => {
+        console.log(dataRecords)
         if (dataRecords.cheeseName === 'Baraloso' && dataRecords.approveProd === 'Verdadero') {
           baraloso.piecesNo += parseInt(dataRecords.piecesNo);
         }

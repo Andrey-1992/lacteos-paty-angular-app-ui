@@ -37,7 +37,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
   ];
 
   cheeseStatus = [
-    {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}, {Name:'Nueva Seleccion', Value:''}
+    {Name:'Nueva Seleccion', Value:''}, {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}
   ];
 
 
@@ -51,23 +51,28 @@ export class FactoryProdInputsDetailView  implements OnInit{
     this.selectedPotsNo = this.filteredRecords.potsNo;
     this.selectedLoteNo = this.filteredRecords.loteNo;
     this.selectedPrice = this.filteredRecords.price;
+    console.log(this.filteredRecords)
   }
 
   getSelectedCategory(e) {
     this.selectedCategory = e.target.value;
+    console.log(this.selectedCategory)
   }
 
   getSelectedRefrigeration(e) {
     this.selectedRefrigeration = e.target.value;
+    console.log(this.selectedRefrigeration)
+  }
+  
+  getSelectedStatus(e) {
+    this.selectedApprovedProd = e.target.value;
+    console.log(this.selectedApprovedProd)
   }
 
   getSelectedDate(e) {
     this.selectedDate = e.target.value;
   }
 
-  getSelectedStatus(e) {
-    this.selectedApprovedProd = e.target.value;
-  }
 
   getSelectedPiecesNo(e) {
     this.selectedPiecesNo = e.target.value;
@@ -92,6 +97,22 @@ export class FactoryProdInputsDetailView  implements OnInit{
 
   callServer() {
     event.preventDefault()  
-    this.dataStorage.getCheeseRecords
+    console.log({
+      id: this.filteredRecords.id,
+      cheeseName: this.selectedCategory,
+      cheeseStatus: 'Entrada',
+      cheeseAvailability: true,
+      piecesNo: this.selectedPiecesNo ,
+      piecesOutNo: 0,
+      weight: 0,
+      currentWeight: 0,
+      potsNo: this.selectedPotsNo,
+      dateIn: this.selectedDate,
+      dateOut: '',
+      price: this.selectedPrice,
+      approveProd: 'Verdadero',
+      loteNo: this.selectedLoteNo,
+      refrigerationType: this.selectedRefrigeration
+    })
   }
 };

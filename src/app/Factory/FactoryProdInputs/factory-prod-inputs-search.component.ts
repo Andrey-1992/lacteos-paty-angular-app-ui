@@ -61,6 +61,6 @@ export class FactoryProdInputsSearch {
 
   setSelectedRecord(record: CheeseDataStructureModel) {
     this.selectedRecord = record;
-    console.log(this.selectedRecord)
+    console.log(this.selectedRecord.id)
   }
 };

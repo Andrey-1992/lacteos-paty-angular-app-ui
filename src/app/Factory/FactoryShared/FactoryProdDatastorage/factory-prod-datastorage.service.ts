@@ -12,7 +12,7 @@ export class DataStorageService {
     // let id = 'YPUUeBo3JOynRvATDQ9u';
     // let notesCollection = collection(this.firebase, 'factory-chesse-records/','YPUUeBo3JOynRvATDQ9u');
     let notesCollection = collection(this.firebase, "factory-chesse-records")
-    return collectionData(notesCollection)
+    return collectionData(notesCollection, {idField:'id'})
   }
 
   getSpecificCheeseRecord(id:string) {

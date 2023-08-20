@@ -16,8 +16,8 @@
       <h5>Cambiar:  <select ngClass="cheese-categorie-" [value]=selectedRefrigeration (change)="getSelectedRefrigeration($event)">
         <option 
           ngClass="option-choice-style"
-          [value]=selectedRefrigeration
           *ngFor="let refrigeration of refrigerationCategory" 
+          [value]=selectedRefrigeration [selected]="refrigeration.Name"
         >
             {{refrigeration.Name}}
         </option>
