@@ -28,9 +28,9 @@ export class DataStorageService {
     addDoc(notesCollection, cheeseData)
   }
 
-  updateCheeseRecord(cheeseData: CheeseDataStructureModel, id: any) {
+  updateCheeseRecord(cheeseData: any, id: any) {
     const db = getFirestore()
-    const docRef = doc(db, "factory-chesse-records", "k8kYKXoJ5B2fjDnDh2bZ");
+    const docRef = doc(db, "factory-chesse-records", id);
 
     const data = {
       cheeseName: 'Comiteco',
@@ -49,7 +49,7 @@ export class DataStorageService {
       refrigerationType: "Grande"
     };
 
-    updateDoc(docRef, data)
+    updateDoc(docRef, cheeseData)
     .then(docRef => {
       console.log("A New Document Field has been added to an existing document");
     })
