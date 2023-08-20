@@ -9,16 +9,9 @@ export class DataStorageService {
   constructor(private http: HttpClient, private firebase:Firestore) {}
 
   getCheeseRecords() {
-    let id = 'YPUUeBo3JOynRvATDQ9u';
-    // setDoc(doc(db, "collectionName", userID, "anotherCollectionName", documentID), ...
-    // db.collection("app").document("users").collection(uid).document("notifications")
-    
-    // const db = getFirestore()
-    // const docRef = collection(db, "factory-chesse-records", "k8kYKXoJ5B2fjDnDh2bZ");
-    // const docRef = doc(this.firebase, "factory-chesse-records/", "yftq9RGp4jWNSyBZ1D6L");
-    
-    let notesCollection = collection(this.firebase, "factory-chesse-records")
+    // let id = 'YPUUeBo3JOynRvATDQ9u';
     // let notesCollection = collection(this.firebase, 'factory-chesse-records/','YPUUeBo3JOynRvATDQ9u');
+    let notesCollection = collection(this.firebase, "factory-chesse-records")
     return collectionData(notesCollection)
   }
 

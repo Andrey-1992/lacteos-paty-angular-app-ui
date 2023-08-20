@@ -71,7 +71,6 @@ export class CreateCheeseDataInput {
       loteNo: this.selectedLoteNo,
       refrigerationType: this.selectedRefrigerationType
     })
-    // this.dataStorage.updateCheeseRecord();
     this.isDisable = true;
   }
 
