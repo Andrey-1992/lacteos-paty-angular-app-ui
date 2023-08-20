@@ -55,23 +55,23 @@ export class CreateCheeseDataInput {
   
   postData() {
     event.preventDefault();
-    // this.dataStorage.storeCheeseRecord({
-    //   cheeseName: this.selectedCategory,
-    //   cheeseStatus: 'Entrada',
-    //   cheeseAvailability: true,
-    //   piecesNo: this.selectedPzNo,
-    //   piecesOutNo: 0,
-    //   weight: 0,
-    //   currentWeight: 0,
-    //   potsNo: this.selectedPotsNo,
-    //   dateIn: this.selectedDate,
-    //   dateOut: '',
-    //   price: 0,
-    //   approveProd: 'Verdadero',
-    //   loteNo: this.selectedLoteNo,
-    //   refrigerationType: this.selectedRefrigerationType
-    // })
-    this.dataStorage.updateCheeseRecord();
+    this.dataStorage.storeCheeseRecord({
+      cheeseName: this.selectedCategory,
+      cheeseStatus: 'Entrada',
+      cheeseAvailability: true,
+      piecesNo: this.selectedPzNo,
+      piecesOutNo: 0,
+      weight: 0,
+      currentWeight: 0,
+      potsNo: this.selectedPotsNo,
+      dateIn: this.selectedDate,
+      dateOut: '',
+      price: 0,
+      approveProd: 'Verdadero',
+      loteNo: this.selectedLoteNo,
+      refrigerationType: this.selectedRefrigerationType
+    })
+    // this.dataStorage.updateCheeseRecord();
     this.isDisable = true;
   }
 

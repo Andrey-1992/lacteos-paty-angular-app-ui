@@ -10,14 +10,14 @@ export class DataStorageService {
 
   getCheeseRecords() {
     let id = 'YPUUeBo3JOynRvATDQ9u';
-    // let notesCollection = collection(this.firebase, 'factory-chesse-records');
-
     // setDoc(doc(db, "collectionName", userID, "anotherCollectionName", documentID), ...
     // db.collection("app").document("users").collection(uid).document("notifications")
-    let notesCollection = collection(this.firebase, 'factory-chesse-records/')
-    const docRef = doc(this.firebase, "factory-chesse-records/", "yftq9RGp4jWNSyBZ1D6L");
-
-
+    
+    // const db = getFirestore()
+    // const docRef = collection(db, "factory-chesse-records", "k8kYKXoJ5B2fjDnDh2bZ");
+    // const docRef = doc(this.firebase, "factory-chesse-records/", "yftq9RGp4jWNSyBZ1D6L");
+    
+    let notesCollection = collection(this.firebase, "factory-chesse-records")
     // let notesCollection = collection(this.firebase, 'factory-chesse-records/','YPUUeBo3JOynRvATDQ9u');
     return collectionData(notesCollection)
   }
@@ -29,18 +29,18 @@ export class DataStorageService {
   }
 
   storeCheeseRecord(cheeseData: CheeseDataStructureModel) {
-    // this.http.post<CheeseDataStructureModel>('https://fabrica-produccion-database-default-rtdb.firebaseio.com/cheese-record.json', cheeseData)
-    // .subscribe(resData => {
-    //   console.log(resData);
-    // })
+    const db = getFirestore()
+    console.log(cheeseData)
+    let notesCollection = collection(this.firebase, "factory-chesse-records");
+    addDoc(notesCollection, cheeseData)
   }
 
   updateCheeseRecord() {
     const db = getFirestore()
-    const docRef = doc(db, "factory-chesse-records", "YPUUeBo3JOynRvATDQ9u");
+    const docRef = doc(db, "factory-chesse-records", "k8kYKXoJ5B2fjDnDh2bZ");
 
     const data = {
-      cheeseName: 'Comiteco BA',
+      cheeseName: 'Comiteco',
       cheeseStatus: "Entrada",
       cheeseAvailability: true,
       piecesNo: 145,
