@@ -28,7 +28,7 @@ export class DataStorageService {
     addDoc(notesCollection, cheeseData)
   }
 
-  updateCheeseRecord() {
+  updateCheeseRecord(cheeseData: CheeseDataStructureModel, id: any) {
     const db = getFirestore()
     const docRef = doc(db, "factory-chesse-records", "k8kYKXoJ5B2fjDnDh2bZ");
 

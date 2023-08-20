@@ -97,8 +97,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
 
   callServer() {
     event.preventDefault()  
-    console.log({
-      id: this.filteredRecords.id,
+    let selectedData = {
       cheeseName: this.selectedCategory,
       cheeseStatus: 'Entrada',
       cheeseAvailability: true,
@@ -113,6 +112,8 @@ export class FactoryProdInputsDetailView  implements OnInit{
       approveProd: 'Verdadero',
       loteNo: this.selectedLoteNo,
       refrigerationType: this.selectedRefrigeration
-    })
+    }
+
+    this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id)
   }
 };
