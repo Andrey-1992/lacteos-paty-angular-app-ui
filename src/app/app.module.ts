@@ -5,6 +5,11 @@ import { AppRoutingFactoryModule } from './app-routing-factory.module';
 // import { AngularFireModule } from "@angular/fire";
 // import { AngularFirestoreModule } from "@angular/fire/firestore";
 // import { environment } from "../environments/environment";
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+
+
+
 
 import { AppComponent } from './app.component';
 import { FactoryMenu } from './Factory/factory-admin-menu.component';
@@ -21,6 +26,18 @@ import { DataHandlingService } from './Factory/FactoryShared/FactoryProdDatastor
 import { FactoryProdInputsSearch } from './Factory/FactoryProdInputs/factory-prod-inputs-search.component';
 import { FactoryProdInputsOverview } from './Factory/FactoryProdInputs/factory-prod-inputs-overview.component';
 import { FactoryProdInputsDetailView } from './Factory/FactoryProdInputs/factory-prod-inputs-detail-view.component';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBxMWO4PxAkNrDDBQl4fu0KoKPAEYTxjy0",
+  authDomain: "fabrica-produccion-database.firebaseapp.com",
+  databaseURL: "https://fabrica-produccion-database-default-rtdb.firebaseio.com",
+  projectId: "fabrica-produccion-database",
+  storageBucket: "fabrica-produccion-database.appspot.com",
+  messagingSenderId: "113232990741",
+  appId: "1:113232990741:web:61c647185339031a75b41c",
+  measurementId: "G-F14FS23JRG"
+};
+
 
 @NgModule({
   declarations: [
@@ -41,7 +58,9 @@ import { FactoryProdInputsDetailView } from './Factory/FactoryProdInputs/factory
   imports: [
     BrowserModule,
     AppRoutingFactoryModule,
-    HttpClientModule ,
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [DataHandlingService],
   bootstrap: [AppComponent]
