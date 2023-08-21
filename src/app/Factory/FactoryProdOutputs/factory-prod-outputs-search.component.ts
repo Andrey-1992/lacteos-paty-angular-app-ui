@@ -5,8 +5,8 @@ import { DataHandlingService } from '../FactoryShared/FactoryProdDatastorage/fac
 
 @Component({
   selector: 'app-search-cheese-input',
-  templateUrl: './factory-prod-inputs-search.component.html',
-  styleUrls: ['./factory-prod-inputs-search.component.css']
+  templateUrl: './factory-prod-outputs-search.component.html',
+  styleUrls: ['./factory-prod-outputs-search.component.css']
 })
 
 export class FactoryProdOutputsSearch {
