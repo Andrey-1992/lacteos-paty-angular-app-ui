@@ -1,0 +1,50 @@
+<div ngClass="fabrica">
+  <form ngClass="top-filter-search-prods">
+    <select ngClass="select-month-search" (change)="getSelectedCategory($event)">
+      <option 
+        ngClass="option-choice-style"
+        *ngFor="let category of cheeseCategory" 
+        [value]="category.Value" [selected]="category.Name"
+      >
+          {{category.Name}}
+      </option>
+    </select>
+    <select ngClass="select-month-search" (change)="getSelectedMonth($event)">
+      <option 
+        ngClass="option-date-style"
+        *ngFor="let month of monthSelection" 
+        [value]="month.Value" [selected]="month.Name"
+      >
+          {{month.Name}}
+      </option>
+    </select>
+    <select ngClass="select-year-search" (change)="getSelectedYear($event)">
+      <option 
+        ngClass="option-date-style"
+        *ngFor="let year of yearSelection" 
+        [value]="year.Value" [selected]="year.Name"
+      >
+          {{year.Name}}
+      </option>
+    </select>
+    <button ngClass='read-prod-records-btn' (click)="searchRecords()">Buscar Reportes</button>
+  </form>
+  <div *ngIf=filterDataByDate.length>
+    <div *ngIf=!detailView> 
+      <div ngClass="cheese-invenroty-card" *ngFor="let data of filterDataByDate">
+        <app-overview-cheese-input 
+          [filteredRecords]="data" 
+          (detailView)="setDetailView($event)"
+          (selectedRecord)="setSelectedRecord($event)"
+        ></app-overview-cheese-input>
+      </div>
+    </div>
+    <div *ngIf=detailView>  
+      <app-detail-view-cheese-input 
+        [filteredRecords]="selectedRecord" 
+        (overview)="setDetailView($event)"
+      ></app-detail-view-cheese-input>
+    </div>
+  </div>
+  <p ngClass='go-back-menu-entradas-prod-admin-busqueda' routerLinkActive="active" routerLink="/factory-prod-inputs-menu">Menu Anterior</p>
+</div>

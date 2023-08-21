@@ -4,7 +4,8 @@ import { FactoryDynamicMenusModel } from '../FactoryShared/factory-dynamic-menus
 @Component({
   selector: 'app-factory-prod-inputs-menu',
   template: 
-  ` <app-factory-dynamic-menus 
+  ` 
+    <app-factory-dynamic-menus 
       [childMenus]="dynamicMenus" 
       [childMenuBtn]=true
       [childMenuBtnText]="menuBtnText"
@@ -22,7 +23,7 @@ export class FactoryProdInputsMenu {
     this.dynamicMenus = [
       {
         textToDisplay: 'Buscar Reporte', 
-        urlLink: '',
+        urlLink: '/factory-prod-inputs-search',
       },
       {
         textToDisplay: 'Crear Reporte', 

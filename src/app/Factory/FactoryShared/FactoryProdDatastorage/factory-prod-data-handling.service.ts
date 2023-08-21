@@ -5,13 +5,14 @@ import { DataStorageService } from "./factory-prod-datastorage.service";
 
 @Injectable({providedIn: 'root'})
 export class DataHandlingService {
+  filterData: any;
+  filterDataOnDate = [];
 
   constructor(private dataStorage: DataStorageService) {}
 
   filterCheeseDataByDate = (): {cheeseName: '', piecesNo: 0}[] => {
     const filterData = [];
     let baraloso = {cheeseName: 'Baraloso', piecesNo: 0 };
-    let baralosoCount = 0;
     let comiteco = {cheeseName: 'Comiteco', piecesNo: 0};
     let comitecoAa = {cheeseName: 'Comiteco AA', piecesNo: 0};
     let comitecoBa = {cheeseName: 'Comiteco BA', piecesNo: 0};
@@ -30,9 +31,26 @@ export class DataHandlingService {
         if (dataRecords.cheeseName === 'Comiteco BA' && dataRecords.approveProd === 'Verdadero') {
           comitecoBa.piecesNo += parseInt(dataRecords.piecesNo);
         }
+        // console.log(dataRecords)
       })
     })
     filterData.push(baraloso, comiteco, comitecoAa, comitecoBa);
     return filterData;
+  }
+
+  filterDataByDate = (selectedCategory: string, selectedMonth: string, selectedYear: string): any => {
+    this.dataStorage.getCheeseRecords()
+    .subscribe(resData => {
+      this.filterDataOnDate = resData.reduce((acc: any, dataRecords: CheeseDataStructureModel) => {
+      if (dataRecords.dateIn.split('-')[0] === selectedYear && dataRecords.dateIn.split('-')[1] === selectedMonth && selectedCategory === 'Todos' && dataRecords.cheeseStatus === 'Entrada') {
+          acc.push(dataRecords)
+        }
+        if (dataRecords.dateIn.split('-')[0] === selectedYear && dataRecords.dateIn.split('-')[1] === selectedMonth && selectedCategory === dataRecords.cheeseName && dataRecords.cheeseStatus === 'Entrada') {
+          acc.push(dataRecords)
+        }
+        return acc;
+      }, [])
+    })
+    return this.filterDataOnDate;
   }
 }
