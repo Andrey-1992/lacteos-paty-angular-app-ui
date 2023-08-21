@@ -40,8 +40,8 @@
       <h4>Precio: $<input type="number"  [value]=selectedPrice ngClass="crear-reporte-queso-num" (change)="getSelectedPrice($event)" ></h4>
       <br>
       <button ngClass='read-prod-records-btn' [disabled]="isDisable" (click)="updateRecord()">{{!isDisable? 'Editar Reporte' : 'Reporte Editado' }}</button>
+      <button ngClass='read-prod-records-btn' [disabled]="isDisable" (click)="deleteRecord()">{{!isDisable? 'Editar Reporte' : 'Reporte Editado' }}</button>
       <!-- <button ngClass='read-prod-records-btn' disabled={isDisable} onClick={deleteRecord}>{!isDisable? 'Eliminar Reporte' : 'Reporte Eliminado!'}</button> -->
-      <!-- <button ngClass='read-prod-records-btn' (click)="callServer()">call server</button> -->
     </div>
   </form>
   <button ngClass='go-back-menu-all-reports-prod-admin' (click)="sendViewStatus()">Regresar</button>

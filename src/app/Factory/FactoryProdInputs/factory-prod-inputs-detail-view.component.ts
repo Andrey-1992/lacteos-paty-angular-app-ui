@@ -117,4 +117,26 @@ export class FactoryProdInputsDetailView  implements OnInit{
     this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id);
     this.isDisable = true;
   }
+
+  deleteRecord() {
+    event.preventDefault()  
+    // let selectedData = {
+    //   cheeseName: this.selectedCategory,
+    //   cheeseStatus: 'Entrada',
+    //   cheeseAvailability: true,
+    //   piecesNo: this.selectedPiecesNo ,
+    //   piecesOutNo: 0,
+    //   weight: 0,
+    //   currentWeight: 0,
+    //   potsNo: this.selectedPotsNo,
+    //   dateIn: this.selectedDate,
+    //   dateOut: '',
+    //   price: this.selectedPrice,
+    //   approveProd: 'Verdadero',
+    //   loteNo: this.selectedLoteNo,
+    //   refrigerationType: this.selectedRefrigeration
+    // }
+    // this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id);
+    this.isDisable = true;
+  }
 };
