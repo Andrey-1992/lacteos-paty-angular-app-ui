@@ -57,17 +57,14 @@ export class FactoryProdInputsDetailView  implements OnInit{
 
   getSelectedCategory(e) {
     this.selectedCategory = e.target.value;
-    // console.log(this.selectedCategory)
   }
 
   getSelectedRefrigerationType(e) {
     this.selectedRefrigeration = e.target.value;
-    // console.log(this.selectedRefrigeration)
   }
   
   getSelectedStatus(e) {
     this.selectedApprovedProd = e.target.value;
-    // console.log(this.selectedApprovedProd)
   }
 
   getSelectedDate(e) {
@@ -110,12 +107,12 @@ export class FactoryProdInputsDetailView  implements OnInit{
       dateIn: this.selectedDate,
       dateOut: '',
       price: this.selectedPrice,
-      approveProd: 'Verdadero',
+      approveProd: this.selectedApprovedProd,
       loteNo: this.selectedLoteNo,
       refrigerationType: this.selectedRefrigeration
     }
-    console.log(selectedData)
-    // this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id);
+    // console.log(selectedData)
+    this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id);
     this.isDisable = true;
   }
 

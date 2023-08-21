@@ -69,7 +69,7 @@ export class CreateCheeseDataInput {
       dateIn: this.selectedDate,
       dateOut: '',
       price: 0,
-      approveProd: 'Verdadero',
+      approveProd: 'Falso',
       loteNo: this.selectedLoteNo,
       refrigerationType: this.selectedRefrigerationType
     })
