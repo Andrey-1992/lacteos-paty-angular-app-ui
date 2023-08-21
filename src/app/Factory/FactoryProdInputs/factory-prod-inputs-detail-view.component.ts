@@ -26,19 +26,19 @@ export class FactoryProdInputsDetailView  implements OnInit{
   selectedPrice: number;
   isDisable: boolean = false;
 
-  cheeseCategory = [ 
+  cheeseCategory = [
     {Name:'Baraloso', Value:'Baraloso'}, {Name:'Comiteco', Value:'Comiteco'}, 
     {Name:'Comiteco BA', Value:'Comiteco BA'}, {Name:'Comiteco AA', Value:'Comiteco AA'},
     {Name:'Selecione Categoria', Value:''}
   ];
 
   refrigerationCategory = [
-    {Name:'Selecione Refrigeracion', Value:''}, {Name:'Grande', Value:'Grande'}, 
-    {Name:'Mediana', Value:'Mediana'}, {Name:'Chica', Value:'Chica'}
+    {Name:'Grande', Value:'Grande'},{Name:'Mediana', Value:'Mediana'}, 
+    {Name:'Chica', Value:'Chica'}, {Name:'Selecione Refrigeracion', Value:''}
   ];
 
   cheeseStatus = [
-    {Name:'Nueva Seleccion', Value:''}, {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}
+    {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}, {Name:'Nueva Seleccion', Value:''}
   ];
 
 
