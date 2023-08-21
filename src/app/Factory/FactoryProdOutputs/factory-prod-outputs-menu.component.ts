@@ -22,10 +22,10 @@ export class FactoryProdOutputsMenu {
     this.dynamicMenus = [
       {
         textToDisplay: 'Buscar Reporte', 
-        urlLink: '/factory-prod',
+        urlLink: '/factory-prod-outputs-search',
       },
       {
-        textToDisplay: 'Crear Reporte', 
+        textToDisplay: 'Reportes Creados', 
         urlLink: ''
       },
       {

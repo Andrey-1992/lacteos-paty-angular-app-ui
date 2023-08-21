@@ -26,6 +26,7 @@ import { DataHandlingService } from './Factory/FactoryShared/FactoryProdDatastor
 import { FactoryProdInputsSearch } from './Factory/FactoryProdInputs/factory-prod-inputs-search.component';
 import { FactoryProdInputsOverview } from './Factory/FactoryProdInputs/factory-prod-inputs-overview.component';
 import { FactoryProdInputsDetailView } from './Factory/FactoryProdInputs/factory-prod-inputs-detail-view.component';
+import { FactoryProdOutputsSearch } from './Factory/FactoryProdOutputs/factory-prod-outputs-search.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBxMWO4PxAkNrDDBQl4fu0KoKPAEYTxjy0",
@@ -53,7 +54,8 @@ const firebaseConfig = {
     CreateCheeseDataInput,
     FactoryProdInputsSearch,
     FactoryProdInputsOverview,
-    FactoryProdInputsDetailView
+    FactoryProdInputsDetailView,
+    FactoryProdOutputsSearch
   ],
   imports: [
     BrowserModule,
