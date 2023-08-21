@@ -36,22 +36,16 @@ export class DataStorageService {
     .then(docRef => {
       console.log("A New Document Field has been added to an existing document");
     })
-        // const data = {
-    //   cheeseName: 'Comiteco',
-    //   cheeseStatus: "Entrada",
-    //   cheeseAvailability: true,
-    //   piecesNo: 145,
-    //   piecesOutNo: 0,
-    //   weight: 0,
-    //   currentWeight: 0,
-    //   potsNo: 14,
-    //   dateIn: "2023-08-10",
-    //   dateOut: '',
-    //   price: 0,
-    //   approveProd: 'Verdadero',
-    //   loteNo: 2,
-    //   refrigerationType: "Grande"
-    // };
+  }
+
+  deleteCheeseRecord(id: any) {
+    const db = getFirestore()
+    const docRef = doc(db, "factory-chesse-records/"+id);
+    // console.log(id)
+    deleteDoc(docRef)
+    .then(docRef => {
+      console.log("A New Document Field has been added to an existing document");
+    })
   }
 }
 
