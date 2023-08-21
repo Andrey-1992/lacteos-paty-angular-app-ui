@@ -34,11 +34,11 @@ export class FactoryProdInputsDetailView  implements OnInit{
 
   refrigerationCategory = [
     {Name:'Grande', Value:'Grande'},{Name:'Mediana', Value:'Mediana'}, 
-    {Name:'Chica', Value:'Chica'}, {Name:'Selecione Refrigeracion', Value:''}
+    {Name:'Chica', Value:'Chica'}, {Name:'Cambiar Refrigeracion ?', Value:''}
   ];
 
   cheeseStatus = [
-    {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}, {Name:'Nueva Seleccion', Value:''}
+    {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}, {Name:'Cambiar Status ?', Value:''}
   ];
 
 
@@ -60,7 +60,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
     console.log(this.selectedCategory)
   }
 
-  getSelectedRefrigeration(e) {
+  getSelectedRefrigerationType(e) {
     this.selectedRefrigeration = e.target.value;
     console.log(this.selectedRefrigeration)
   }
