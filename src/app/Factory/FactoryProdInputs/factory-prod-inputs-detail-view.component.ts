@@ -34,11 +34,11 @@ export class FactoryProdInputsDetailView  implements OnInit{
 
   refrigerationCategory = [
     {Name:'Grande', Value:'Grande'},{Name:'Mediana', Value:'Mediana'}, 
-    {Name:'Chica', Value:'Chica'}, {Name:'Cambiar Refrigeracion ?', Value:''}
+    {Name:'Chica', Value:'Chica'}, {Name:'Cambiar Refrigeracion', Value:''}
   ];
 
   cheeseStatus = [
-    {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}, {Name:'Cambiar Status ?', Value:''}
+    {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}, {Name:'Cambiar Status', Value:''}
   ];
 
 
@@ -57,17 +57,17 @@ export class FactoryProdInputsDetailView  implements OnInit{
 
   getSelectedCategory(e) {
     this.selectedCategory = e.target.value;
-    console.log(this.selectedCategory)
+    // console.log(this.selectedCategory)
   }
 
   getSelectedRefrigerationType(e) {
     this.selectedRefrigeration = e.target.value;
-    console.log(this.selectedRefrigeration)
+    // console.log(this.selectedRefrigeration)
   }
   
   getSelectedStatus(e) {
     this.selectedApprovedProd = e.target.value;
-    console.log(this.selectedApprovedProd)
+    // console.log(this.selectedApprovedProd)
   }
 
   getSelectedDate(e) {
@@ -114,7 +114,8 @@ export class FactoryProdInputsDetailView  implements OnInit{
       loteNo: this.selectedLoteNo,
       refrigerationType: this.selectedRefrigeration
     }
-    this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id);
+    console.log(selectedData)
+    // this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id);
     this.isDisable = true;
   }
 
