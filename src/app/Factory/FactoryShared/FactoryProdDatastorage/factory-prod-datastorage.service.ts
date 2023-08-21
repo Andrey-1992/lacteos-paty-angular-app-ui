@@ -9,15 +9,13 @@ export class DataStorageService {
   constructor(private http: HttpClient, private firebase:Firestore) {}
 
   getCheeseRecords() {
-    // let id = 'YPUUeBo3JOynRvATDQ9u';
-    // let notesCollection = collection(this.firebase, 'factory-chesse-records/','YPUUeBo3JOynRvATDQ9u');
     let notesCollection = collection(this.firebase, "factory-chesse-records")
     return collectionData(notesCollection, {idField:'id'})
   }
 
   getSpecificCheeseRecord(id:string) {
     id = 'k8kYKXoJ5B2fjDnDh2bZ';
-    let notesCollection = collection(this.firebase, 'factory-chesse-records'+id);
+    let notesCollection = collection(this.firebase, 'factory-chesse-records/'+id);
     return collectionData(notesCollection)
   }
 
@@ -31,7 +29,6 @@ export class DataStorageService {
   updateCheeseRecord(cheeseData: any, id: any) {
     const db = getFirestore()
     const docRef = doc(db, "factory-chesse-records", id);
-
     updateDoc(docRef, cheeseData)
     .then(docRef => {
       console.log("A New Document Field has been added to an existing document");
@@ -40,8 +37,7 @@ export class DataStorageService {
 
   deleteCheeseRecord(id: any) {
     const db = getFirestore()
-    const docRef = doc(db, "factory-chesse-records/"+id);
-    // console.log(id)
+    const docRef = doc(db, "factory-chesse-records/"+id)
     deleteDoc(docRef)
     .then(docRef => {
       console.log("A New Document Field has been added to an existing document");

@@ -20,19 +20,21 @@ export class CreateCheeseDataInput {
   isDisable: boolean = false;
   
   cheeseCategory = [
-    {Name:'Selecione Categoria', Value:''},
     {Name:'Baraloso', Value:'Baraloso'}, {Name:'Comiteco', Value:'Comiteco'}, 
-    {Name:'Comiteco BA', Value:'Comiteco BA'}, {Name:'Comiteco AA', Value:'Comiteco AA'}
+    {Name:'Comiteco BA', Value:'Comiteco BA'}, {Name:'Comiteco AA', Value:'Comiteco AA'},
+    {Name:'Selecione Categoria', Value:''}
   ];
   
   refrigerationCategory = [
-    {Name:'Selecione Refrigeracion', Value:''}, {Name:'Grande', Value:'Grande'}, 
-    {Name:'Mediana', Value:'Mediana'}, {Name:'Chica', Value:'Chica'}
+    {Name:'Grande', Value:'Grande'},{Name:'Mediana', Value:'Mediana'}, 
+    {Name:'Chica', Value:'Chica'}, {Name:'Selecione Refrigeracion', Value:''}
   ];
   
   getSelectedCategory(e) {
     this.selectedCategory = e.target.value;
+    console.log(e.target.value)
   }
+
   getSelectedRefrigerationType(e) {
     this.selectedRefrigerationType = e.target.value;
   }
