@@ -24,6 +24,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
   selectedPotsNo: number;
   selectedLoteNo: number;
   selectedPrice: number;
+  isDisable: boolean = false;
 
   cheeseCategory = [ 
     {Name:'Baraloso', Value:'Baraloso'}, {Name:'Comiteco', Value:'Comiteco'}, 
@@ -95,7 +96,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
     this.overview.emit(false);
   }
 
-  callServer() {
+  updateRecord() {
     event.preventDefault()  
     let selectedData = {
       cheeseName: this.selectedCategory,
@@ -113,7 +114,7 @@ export class FactoryProdInputsDetailView  implements OnInit{
       loteNo: this.selectedLoteNo,
       refrigerationType: this.selectedRefrigeration
     }
-
-    this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id)
+    this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id);
+    this.isDisable = true;
   }
 };

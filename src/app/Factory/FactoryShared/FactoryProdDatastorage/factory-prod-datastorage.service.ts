@@ -32,27 +32,26 @@ export class DataStorageService {
     const db = getFirestore()
     const docRef = doc(db, "factory-chesse-records", id);
 
-    const data = {
-      cheeseName: 'Comiteco',
-      cheeseStatus: "Entrada",
-      cheeseAvailability: true,
-      piecesNo: 145,
-      piecesOutNo: 0,
-      weight: 0,
-      currentWeight: 0,
-      potsNo: 14,
-      dateIn: "2023-08-10",
-      dateOut: '',
-      price: 0,
-      approveProd: 'Verdadero',
-      loteNo: 2,
-      refrigerationType: "Grande"
-    };
-
     updateDoc(docRef, cheeseData)
     .then(docRef => {
       console.log("A New Document Field has been added to an existing document");
     })
+        // const data = {
+    //   cheeseName: 'Comiteco',
+    //   cheeseStatus: "Entrada",
+    //   cheeseAvailability: true,
+    //   piecesNo: 145,
+    //   piecesOutNo: 0,
+    //   weight: 0,
+    //   currentWeight: 0,
+    //   potsNo: 14,
+    //   dateIn: "2023-08-10",
+    //   dateOut: '',
+    //   price: 0,
+    //   approveProd: 'Verdadero',
+    //   loteNo: 2,
+    //   refrigerationType: "Grande"
+    // };
   }
 }
 
