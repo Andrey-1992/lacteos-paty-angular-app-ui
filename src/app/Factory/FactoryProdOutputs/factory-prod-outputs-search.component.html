@@ -40,10 +40,10 @@
       </div>
     </div>
     <div *ngIf=detailView>  
-      <app-detail-view-cheese-input 
+      <app-detail-view-cheese-output 
         [filteredRecords]="selectedRecord" 
         (overview)="setDetailView($event)"
-      ></app-detail-view-cheese-input>
+      ></app-detail-view-cheese-output>
     </div>
   </div>
   <p ngClass='go-back-menu-entradas-prod-admin-busqueda' routerLinkActive="active" routerLink="/factory-prod-outputs-menu">Menu Anterior</p>

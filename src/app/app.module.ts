@@ -28,6 +28,7 @@ import { FactoryProdInputsOverview } from './Factory/FactoryProdInputs/factory-p
 import { FactoryProdInputsDetailView } from './Factory/FactoryProdInputs/factory-prod-inputs-detail-view.component';
 import { FactoryProdOutputsSearch } from './Factory/FactoryProdOutputs/factory-prod-outputs-search.component';
 import { FactoryProdOutputsOverview } from './Factory/FactoryProdOutputs/factory-prod-outputs-overview.component';
+import { FactoryProdOutputsDetailView } from './Factory/FactoryProdOutputs/factory-prod-outputs-detail-view.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBxMWO4PxAkNrDDBQl4fu0KoKPAEYTxjy0",
@@ -57,7 +58,8 @@ const firebaseConfig = {
     FactoryProdInputsOverview,
     FactoryProdInputsDetailView,
     FactoryProdOutputsSearch,
-    FactoryProdOutputsOverview
+    FactoryProdOutputsOverview,
+    FactoryProdOutputsDetailView
   ],
   imports: [
     BrowserModule,
