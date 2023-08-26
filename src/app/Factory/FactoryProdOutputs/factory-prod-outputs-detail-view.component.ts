@@ -28,6 +28,7 @@ export class FactoryProdOutputsDetailView implements OnInit{
   selectedPotsNo: number;
   selectedLoteNo: number;
   selectedPrice: number;
+  selectedWeight: number;
   isDisable: boolean = false;
 
   cheeseCategory = [
@@ -57,40 +58,47 @@ export class FactoryProdOutputsDetailView implements OnInit{
     this.selectedPotsNo = this.filteredRecords.potsNo;
     this.selectedLoteNo = this.filteredRecords.loteNo;
     this.selectedPrice = this.filteredRecords.price;
+    this.selectedWeight = this.filteredRecords.weight;
     // console.log(this.filteredRecords)
   }
 
-  getSelectedCategory(e) {
-    this.selectedCategory = e.target.value;
-  }
+  // getSelectedCategory(e) {
+  //   this.selectedCategory = e.target.value;
+  // }
 
-  getSelectedRefrigerationType(e) {
-    this.selectedRefrigeration = e.target.value;
-  }
+  // getSelectedRefrigerationType(e) {
+  //   this.selectedRefrigeration = e.target.value;
+  // }
   
-  getSelectedStatus(e) {
-    this.selectedApprovedProd = e.target.value;
-  }
+  // getSelectedStatus(e) {
+  //   this.selectedApprovedProd = e.target.value;
+  // }
 
+  
+  
+  // getSelectedPiecesNo(e) {
+    //   this.selectedPiecesNo = e.target.value;
+    // }
+    
+  // getSelectedLoteNo(e) {
+  //   this.selectedLoteNo = e.target.value;
+  // }
+  
   getSelectedDate(e) {
     this.selectedDateOut = e.target.value;
-  }
-
-
-  getSelectedPiecesNo(e) {
-    this.selectedPiecesNo = e.target.value;
   }
 
   getSelectedPiecesOutNo(e) {
     this.selectedPiecesOutNo = e.target.value;
   }
 
-  getSelectedLoteNo(e) {
-    this.selectedLoteNo = e.target.value;
-  }
 
   getSelectedPrice(e) {
     this.selectedPrice = e.target.value;
+  }
+
+  getSelectedWeight(e) {
+    this.selectedWeight= e.target.value;
   }
 
   sendViewStatus = ():void => {
@@ -106,7 +114,7 @@ export class FactoryProdOutputsDetailView implements OnInit{
       cheeseAvailability: true,
       piecesNo: this.selectedPiecesNo,
       piecesOutNo: this.selectedPiecesOutNo,
-      weight: 0,
+      weight: this.selectedWeight,
       currentWeight: 0,
       potsNo: this.selectedPotsNo,
       dateIn: this.selectedDate,
@@ -116,11 +124,11 @@ export class FactoryProdOutputsDetailView implements OnInit{
       loteNo: this.selectedLoteNo,
       refrigerationType: this.selectedRefrigeration
     }
-    // console.log(selectedData)
-    this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id);
+    console.log(selectedData)
+    // this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id);
     this.isDisable = true;
   }
-  
+
   // deleteRecord() {
   //   event.preventDefault()  
   //   this.dataStorage.deleteCheeseRecord(this.filteredRecords.id);
