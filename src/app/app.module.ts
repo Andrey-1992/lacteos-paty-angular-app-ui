@@ -7,10 +7,6 @@ import { AppRoutingFactoryModule } from './app-routing-factory.module';
 // import { environment } from "../environments/environment";
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-
-
-
-
 import { AppComponent } from './app.component';
 import { FactoryMenu } from './Factory/factory-admin-menu.component';
 import { FactoryUserSelection } from './Factory/factory-user-selection.component';
@@ -41,7 +37,6 @@ const firebaseConfig = {
   measurementId: "G-F14FS23JRG"
 };
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,4 +66,5 @@ const firebaseConfig = {
   providers: [DataHandlingService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
