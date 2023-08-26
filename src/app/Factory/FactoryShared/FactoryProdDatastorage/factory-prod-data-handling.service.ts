@@ -51,6 +51,24 @@ export class DataHandlingService {
         return acc;
       }, [])
     })
+    // console.log(this.filterDataOnDate)
+    return this.filterDataOnDate;
+  }
+
+  filterDataByDateOutbound = (selectedCategory: string, selectedMonth: string, selectedYear: string): any => {
+    this.dataStorage.getCheeseRecordsOutputs()
+    .subscribe(resData => {
+      this.filterDataOnDate = resData.reduce((acc: any, dataRecords: CheeseDataStructureModel) => {
+      if (dataRecords.dateIn.split('-')[0] === selectedYear && dataRecords.dateIn.split('-')[1] === selectedMonth && selectedCategory === 'Todos' && dataRecords.cheeseStatus === 'Entrada') {
+          acc.push(dataRecords)
+        }
+        if (dataRecords.dateIn.split('-')[0] === selectedYear && dataRecords.dateIn.split('-')[1] === selectedMonth && selectedCategory === dataRecords.cheeseName && dataRecords.cheeseStatus === 'Entrada') {
+          acc.push(dataRecords)
+        }
+        return acc;
+      }, [])
+    })
+    // console.log(this.filterDataOnDate)
     return this.filterDataOnDate;
   }
 }

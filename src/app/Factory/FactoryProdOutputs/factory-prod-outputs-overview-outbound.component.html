@@ -1,0 +1,21 @@
+<div ngClass="crearReporteProdAdmin">
+  <form ngClass="cheese-categories-form">
+    <div ngClass="crear-reporte-queso-marco">
+      <img ngClass="cheese-piece-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU" alt="Imagen de Pieza de Queso" width="200" height="200">
+      <h3 ngClass="crear-reporte-queso-texto">Tipo de Queso:</h3>
+      <h3><strong>{{selectedCategory}}</strong></h3>
+      <h3 ngClass="crear-reporte-queso-texto">Fecha de Entrada:</h3>
+      <h3><strong>{{cleanedDate}}</strong></h3>
+      <h3 ngClass="crear-reporte-queso-texto">Fecha de Salida:</h3>
+      <h3><strong>{{selectedDateOut}}</strong></h3>
+      <h4 ngClass="crear-reporte-queso-texto">Refrigeracion: {{selectedRefrigeration}}</h4>
+      <h4>No Piezas Actuales: {{selectedPiecesNo}}</h4>
+      <h4>No Piezas Salida: {{selectedPiecesOutNo}}</h4>
+      <h4>Kilogramos: {{selectedWeight}}</h4>
+      <h4>No Olladas: {{selectedPotsNo}}</h4>
+      <h4>No Lote: {{selectedLoteNo}}</h4>
+      <h4>Precio: {{selectedPrice}}</h4>
+      <!-- <button ngClass="read-prod-records-btn" (click)="sendStatus()">Editar Reporte</button> -->
+    </div>
+  </form>
+</div>

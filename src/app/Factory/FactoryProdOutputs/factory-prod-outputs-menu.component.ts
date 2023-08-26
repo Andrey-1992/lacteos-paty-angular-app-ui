@@ -21,12 +21,12 @@ export class FactoryProdOutputsMenu {
   ngOnInit(): void {
     this.dynamicMenus = [
       {
-        textToDisplay: 'Buscar Reporte', 
-        urlLink: '/factory-prod',
+        textToDisplay: 'Crear Reporte', 
+        urlLink: '/factory-prod-outputs-search',
       },
       {
-        textToDisplay: 'Crear Reporte', 
-        urlLink: ''
+        textToDisplay: 'Reportes Creados', 
+        urlLink: '/factory-prod-outputs-search-outbound'
       },
       {
         textToDisplay: 'Crear Nota', 
