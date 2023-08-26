@@ -4,7 +4,7 @@ import { FactoryDynamicMenusModel } from '../FactoryShared/factory-dynamic-menus
 import { DataHandlingService } from '../FactoryShared/FactoryProdDatastorage/factory-prod-data-handling.service';
 
 @Component({
-  selector: 'app-search-cheese-input',
+  selector: 'app-search-cheese-output',
   templateUrl: './factory-prod-outputs-search.component.html',
   styleUrls: ['./factory-prod-outputs-search.component.css']
 })

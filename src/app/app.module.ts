@@ -55,7 +55,7 @@ const firebaseConfig = {
     FactoryProdInputsSearch,
     FactoryProdInputsOverview,
     FactoryProdInputsDetailView,
-    FactoryProdOutputsSearch
+    FactoryProdOutputsSearch,
   ],
   imports: [
     BrowserModule,
