@@ -95,7 +95,8 @@ export class FactoryProdOutputsDetailView implements OnInit{
       refrigerationType: this.selectedRefrigeration
     }
     console.log(selectedData)
-    // this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id);
+    this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id);
+    this.dataStorage.storeCheeseRecordOutputs(selectedData);
     this.isDisable = true;
   }
 };
