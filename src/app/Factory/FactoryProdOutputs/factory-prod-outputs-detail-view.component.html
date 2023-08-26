@@ -3,41 +3,14 @@
     <div ngClass="crear-reporte-queso-marco">
       <img ngClass="cheese-piece-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU" alt="Imagen de Pieza de Queso" width="200" height="200">
       <h3 ngClass="crear-reporte-queso-texto">Tipo de Queso: {{filteredRecords.cheeseName}}</h3>
-      <!-- <h5>Cambiar:  <select ngClass="cheese-categorie-" [value]=selectedCategory (change)="getSelectedCategory($event)">
-        <option 
-          ngClass="option-choice-style"
-          *ngFor="let category of cheeseCategory" 
-          [value]="category.Value" [selected]="category.Name"
-        >
-            {{category.Name}}
-        </option>
-      </select></h5> -->
-      <!-- <h3 ngClass="crear-reporte-queso-texto">Refrigeracion: {{filteredRecords.refrigerationType}}</h3>
-      <select ngClass="cheese-categorie-" required (change)="getSelectedRefrigerationType($event)">
-        <option 
-          ngClass="option-choice-style" 
-          *ngFor="let refrigeration of refrigerationCategory" 
-          [value]="refrigeration.Value" [selected]="refrigeration.Name"
-        >
-            {{refrigeration.Name}}
-        </option>
-      </select> -->
+      <h3 ngClass="crear-reporte-queso-texto">Fecha De Entrada: {{selectedDateIn}}</h3>
       <h3 ngClass="crear-reporte-queso-texto">Fecha De Salida:</h3>
       <input type="date" [value]=selectedDate ngClass="crear-reporte-queso-date" (change)="getSelectedDate($event)">
-      <!-- <h4>Entrada Aprobada: {{selectedApprovedProd }}</h4>
-      <select ngClass="cheese-categorie-" required (change)="getSelectedStatus($event)">
-        <option 
-          ngClass="option-choice-style" 
-          *ngFor="let status of cheeseStatus" 
-          [value]="status.Value" [selected]="status.Name"
-        >
-            {{status.Name}}
-        </option>
-      </select> -->
-      <h4>No Piezas: <input type="number"  [value]=selectedPiecesNo ngClass="crear-reporte-queso-num" (change)="getSelectedPiecesNo($event)" ></h4>
-      <h4>No Pieza de Salida: <input type="number"  [value]=selectedPiecesOutNo ngClass="crear-reporte-queso-num" (change)="getSelectedPiecesOutNo($event)" ></h4>
-      <h4>No Lote: <input type="number"  [value]=selectedLoteNo ngClass="crear-reporte-queso-num" (change)="getSelectedLoteNo($event)" ></h4>
+      <h4>No Piezas:  {{selectedPiecesNo}}</h4>
+      <h4>No Piezas Salida:<input type="number"  [value]=selectedPiecesOutNo ngClass="crear-reporte-queso-num" (change)="getSelectedPiecesOutNo($event)" ></h4>
+      <h4>Kilogramos: <input type="number"  [value]=selectedWeight ngClass="crear-reporte-queso-num" (change)="getSelectedWeight($event)" ></h4>
       <h4>Precio: $<input type="number"  [value]=selectedPrice ngClass="crear-reporte-queso-num" (change)="getSelectedPrice($event)" ></h4>
+      <h4>No Lote: {{selectedLoteNo}}</h4>
       <br>
       <button ngClass='read-prod-records-btn' [disabled]="isDisable" (click)="updateRecord()">{{!isDisable? 'Editar Reporte' : 'Reporte Editado' }}</button>
       <!-- <button ngClass='read-prod-records-btn' [disabled]="isDisable" (click)="deleteRecord()">{{!isDisable? 'Eliminar Reporte' : 'Reporte Eliminado' }}</button> -->

@@ -83,7 +83,7 @@ export class FactoryProdOutputsDetailView implements OnInit{
   // getSelectedLoteNo(e) {
   //   this.selectedLoteNo = e.target.value;
   // }
-  
+
   getSelectedDate(e) {
     this.selectedDateOut = e.target.value;
   }
@@ -117,7 +117,7 @@ export class FactoryProdOutputsDetailView implements OnInit{
       weight: this.selectedWeight,
       currentWeight: 0,
       potsNo: this.selectedPotsNo,
-      dateIn: this.selectedDate,
+      dateIn: this.selectedDateIn,
       dateOut: this.selectedDateOut,
       price: this.selectedPrice,
       approveProd: this.selectedApprovedProd,
