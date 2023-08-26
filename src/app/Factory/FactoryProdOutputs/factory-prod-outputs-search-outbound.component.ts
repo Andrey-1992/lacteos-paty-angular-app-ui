@@ -52,7 +52,7 @@ export class FactoryProdOutputsSearchOutbound {
 
   searchRecords() {
     event.preventDefault();
-    this.filterDataByDate = this.dataHandlingService.filterDataByDate(this.selectedCategory, this.selectedMonth, this.selectedYear)
+    this.filterDataByDate = this.dataHandlingService.filterDataByDate(this.selectedCategory, this.selectedMonth, this.selectedYear);
   }
 
   setDetailView(viewInfo: boolean) {

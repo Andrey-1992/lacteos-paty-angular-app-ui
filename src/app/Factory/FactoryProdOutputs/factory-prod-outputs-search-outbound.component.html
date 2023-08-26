@@ -30,21 +30,21 @@
     <button ngClass='read-prod-records-btn' (click)="searchRecords()">Buscar Reportes</button>
   </form>
   <div *ngIf=filterDataByDate.length>
-    <div *ngIf=!detailView> 
+    <!-- <div *ngIf=!detailView>  -->
       <div ngClass="cheese-invenroty-card" *ngFor="let data of filterDataByDate">
-        <app-overview-cheese-output-outbound 
+        <app-overview-cheese-output-outbound
           [filteredRecords]="data" 
           (detailView)="setDetailView($event)"
           (selectedRecord)="setSelectedRecord($event)"
         ></app-overview-cheese-output-outbound>
       </div>
-    </div>
-    <div *ngIf=detailView>  
+    <!-- </div> -->
+    <!-- <div *ngIf=detailView>  
       <app-detail-view-cheese-output 
         [filteredRecords]="selectedRecord" 
         (overview)="setDetailView($event)"
       ></app-detail-view-cheese-output>
-    </div>
+    </div> -->
   </div>
   <p ngClass='go-back-menu-entradas-prod-admin-busqueda' routerLinkActive="active" routerLink="/factory-prod-outputs-menu">Menu Anterior</p>
 </div>
