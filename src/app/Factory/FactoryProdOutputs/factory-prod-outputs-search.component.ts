@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CheeseDataStructureModel } from '../FactoryShared/CheeseDataStructure/cheese-data-structure.model';
-import { FactoryDynamicMenusModel } from '../FactoryShared/factory-dynamic-menus.model';
 import { DataHandlingService } from '../FactoryShared/FactoryProdDatastorage/factory-prod-data-handling.service';
 
 @Component({
