@@ -3,6 +3,7 @@
     <div ngClass="crear-reporte-queso-marco">
       <img ngClass="cheese-piece-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU" alt="Imagen de Pieza de Queso" width="200" height="200">
       <h3 ngClass="crear-reporte-queso-texto">Tipo de Queso: {{filteredRecords.cheeseName}}</h3>
+      <h3>No Lote: {{selectedLoteNo}}</h3>
       <h3 ngClass="crear-reporte-queso-texto">Fecha De Entrada: {{selectedDateIn}}</h3>
       <h3 ngClass="crear-reporte-queso-texto">Fecha De Salida:</h3>
       <input type="date" [value]=selectedDate ngClass="crear-reporte-queso-date" (change)="getSelectedDate($event)">
@@ -10,9 +11,8 @@
       <h4>No Piezas Salida:<input type="number"  [value]=selectedPiecesOutNo ngClass="crear-reporte-queso-num" (change)="getSelectedPiecesOutNo($event)" ></h4>
       <h4>Kilogramos: <input type="number"  [value]=selectedWeight ngClass="crear-reporte-queso-num" (change)="getSelectedWeight($event)" ></h4>
       <h4>Precio: $<input type="number"  [value]=selectedPrice ngClass="crear-reporte-queso-num" (change)="getSelectedPrice($event)" ></h4>
-      <h4>No Lote: {{selectedLoteNo}}</h4>
       <br>
-      <button ngClass='read-prod-records-btn' [disabled]="isDisable" (click)="updateRecord()">{{!isDisable? 'Editar Reporte' : 'Reporte Editado' }}</button>
+      <button ngClass='read-prod-records-btn' [disabled]="isDisable" (click)="updateRecord()">{{!isDisable? 'Crear Reporte' : 'Reporte Creado' }}</button>
       <!-- <button ngClass='read-prod-records-btn' [disabled]="isDisable" (click)="deleteRecord()">{{!isDisable? 'Eliminar Reporte' : 'Reporte Eliminado' }}</button> -->
     </div>
   </form>

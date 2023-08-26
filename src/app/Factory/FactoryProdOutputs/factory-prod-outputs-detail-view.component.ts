@@ -31,20 +31,20 @@ export class FactoryProdOutputsDetailView implements OnInit{
   selectedWeight: number;
   isDisable: boolean = false;
 
-  cheeseCategory = [
-    {Name:'Baraloso', Value:'Baraloso'}, {Name:'Comiteco', Value:'Comiteco'}, 
-    {Name:'Comiteco BA', Value:'Comiteco BA'}, {Name:'Comiteco AA', Value:'Comiteco AA'},
-    {Name:'Selecione Categoria', Value:''}
-  ];
+  // cheeseCategory = [
+  //   {Name:'Baraloso', Value:'Baraloso'}, {Name:'Comiteco', Value:'Comiteco'}, 
+  //   {Name:'Comiteco BA', Value:'Comiteco BA'}, {Name:'Comiteco AA', Value:'Comiteco AA'},
+  //   {Name:'Selecione Categoria', Value:''}
+  // ];
 
-  refrigerationCategory = [
-    {Name:'Grande', Value:'Grande'},{Name:'Mediana', Value:'Mediana'}, 
-    {Name:'Chica', Value:'Chica'}, {Name:'Cambiar Refrigeracion', Value:''}
-  ];
+  // refrigerationCategory = [
+  //   {Name:'Grande', Value:'Grande'},{Name:'Mediana', Value:'Mediana'}, 
+  //   {Name:'Chica', Value:'Chica'}, {Name:'Cambiar Refrigeracion', Value:''}
+  // ];
 
-  cheeseStatus = [
-    {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}, {Name:'Cambiar Status', Value:''}
-  ];
+  // cheeseStatus = [
+  //   {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}, {Name:'Cambiar Status', Value:''}
+  // ];
 
   ngOnInit(): void {
     this.cleanedDate = this.filteredRecords.dateIn.slice(0, 10).split('-').join(' / ');
