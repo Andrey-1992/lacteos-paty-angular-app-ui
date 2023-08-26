@@ -108,11 +108,12 @@ export class FactoryProdOutputsDetailView implements OnInit{
 
   updateRecord() {
     event.preventDefault()  
+    const piecesSubstraction = this.selectedPiecesNo - this.selectedPiecesOutNo
     let selectedData = {
       cheeseName: this.selectedCategory,
       cheeseStatus: 'Entrada',
       cheeseAvailability: true,
-      piecesNo: this.selectedPiecesNo,
+      piecesNo: piecesSubstraction,
       piecesOutNo: this.selectedPiecesOutNo,
       weight: this.selectedWeight,
       currentWeight: 0,
