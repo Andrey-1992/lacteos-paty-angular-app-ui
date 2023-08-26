@@ -31,21 +31,6 @@ export class FactoryProdOutputsDetailView implements OnInit{
   selectedWeight: number;
   isDisable: boolean = false;
 
-  // cheeseCategory = [
-  //   {Name:'Baraloso', Value:'Baraloso'}, {Name:'Comiteco', Value:'Comiteco'}, 
-  //   {Name:'Comiteco BA', Value:'Comiteco BA'}, {Name:'Comiteco AA', Value:'Comiteco AA'},
-  //   {Name:'Selecione Categoria', Value:''}
-  // ];
-
-  // refrigerationCategory = [
-  //   {Name:'Grande', Value:'Grande'},{Name:'Mediana', Value:'Mediana'}, 
-  //   {Name:'Chica', Value:'Chica'}, {Name:'Cambiar Refrigeracion', Value:''}
-  // ];
-
-  // cheeseStatus = [
-  //   {Name:'Falso', Value:'Falso'}, {Name:'Verdadero', Value:'Verdadero'}, {Name:'Cambiar Status', Value:''}
-  // ];
-
   ngOnInit(): void {
     this.cleanedDate = this.filteredRecords.dateIn.slice(0, 10).split('-').join(' / ');
     this.selectedCategory = this.filteredRecords.cheeseName;
@@ -61,28 +46,6 @@ export class FactoryProdOutputsDetailView implements OnInit{
     this.selectedWeight = this.filteredRecords.weight;
     // console.log(this.filteredRecords)
   }
-
-  // getSelectedCategory(e) {
-  //   this.selectedCategory = e.target.value;
-  // }
-
-  // getSelectedRefrigerationType(e) {
-  //   this.selectedRefrigeration = e.target.value;
-  // }
-  
-  // getSelectedStatus(e) {
-  //   this.selectedApprovedProd = e.target.value;
-  // }
-
-  
-  
-  // getSelectedPiecesNo(e) {
-    //   this.selectedPiecesNo = e.target.value;
-    // }
-    
-  // getSelectedLoteNo(e) {
-  //   this.selectedLoteNo = e.target.value;
-  // }
 
   getSelectedDate(e) {
     this.selectedDateOut = e.target.value;
@@ -129,10 +92,4 @@ export class FactoryProdOutputsDetailView implements OnInit{
     // this.dataStorage.updateCheeseRecord(selectedData, this.filteredRecords.id);
     this.isDisable = true;
   }
-
-  // deleteRecord() {
-  //   event.preventDefault()  
-  //   this.dataStorage.deleteCheeseRecord(this.filteredRecords.id);
-  //   this.isDisable = true;
-  // }
 };
