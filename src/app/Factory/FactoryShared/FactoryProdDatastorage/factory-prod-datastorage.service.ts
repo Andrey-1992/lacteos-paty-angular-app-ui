@@ -13,16 +13,28 @@ export class DataStorageService {
     return collectionData(notesCollection, {idField:'id'})
   }
 
-  getSpecificCheeseRecord(id:string) {
-    id = 'k8kYKXoJ5B2fjDnDh2bZ';
-    let notesCollection = collection(this.firebase, 'factory-chesse-records/'+id);
-    return collectionData(notesCollection)
+  getCheeseRecordsOutputs() {
+    let notesCollection = collection(this.firebase, "factory-chesse-records-outputs")
+    return collectionData(notesCollection, {idField:'id'})
   }
+
+  // getSpecificCheeseRecord(id:string) {
+  //   id = 'k8kYKXoJ5B2fjDnDh2bZ';
+  //   let notesCollection = collection(this.firebase, 'factory-chesse-records/'+id);
+  //   return collectionData(notesCollection)
+  // }
 
   storeCheeseRecord(cheeseData: CheeseDataStructureModel) {
     const db = getFirestore()
     console.log(cheeseData)
     let notesCollection = collection(this.firebase, "factory-chesse-records");
+    addDoc(notesCollection, cheeseData)
+  }
+
+  storeCheeseRecordOutputs(cheeseData: CheeseDataStructureModel) {
+    const db = getFirestore()
+    console.log(cheeseData)
+    let notesCollection = collection(this.firebase, "factory-chesse-records-outputs");
     addDoc(notesCollection, cheeseData)
   }
 
