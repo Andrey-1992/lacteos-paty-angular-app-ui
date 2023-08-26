@@ -1,0 +1,1 @@
+// factory-prod-outputs-detail-view.component
