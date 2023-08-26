@@ -51,7 +51,7 @@ export class DataHandlingService {
         return acc;
       }, [])
     })
-    console.log(this.filterDataOnDate)
+    // console.log(this.filterDataOnDate)
     return this.filterDataOnDate;
   }
 
@@ -68,7 +68,7 @@ export class DataHandlingService {
         return acc;
       }, [])
     })
-    console.log(this.filterDataOnDate)
+    // console.log(this.filterDataOnDate)
     return this.filterDataOnDate;
   }
 }
