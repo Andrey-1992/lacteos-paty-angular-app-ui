@@ -32,11 +32,11 @@
   <div *ngIf=filterDataByDate.length>
     <div *ngIf=!detailView> 
       <div ngClass="cheese-invenroty-card" *ngFor="let data of filterDataByDate">
-        <app-overview-cheese-output 
+        <app-overview-cheese-output-outbound 
           [filteredRecords]="data" 
           (detailView)="setDetailView($event)"
           (selectedRecord)="setSelectedRecord($event)"
-        ></app-overview-cheese-output>
+        ></app-overview-cheese-output-outbound>
       </div>
     </div>
     <div *ngIf=detailView>  
