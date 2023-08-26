@@ -26,7 +26,7 @@ export class FactoryProdOutputsMenu {
       },
       {
         textToDisplay: 'Reportes Creados', 
-        urlLink: ''
+        urlLink: '/factory-prod-outputs-search-outbound'
       },
       {
         textToDisplay: 'Crear Nota', 
