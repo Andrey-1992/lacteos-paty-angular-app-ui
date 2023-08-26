@@ -29,6 +29,7 @@ export class FactoryProdOutputsDetailView implements OnInit{
   selectedLoteNo: number;
   selectedPrice: number;
   selectedWeight: number;
+  piecesSubstraction: number
   isDisable: boolean = false;
 
   ngOnInit(): void {
@@ -69,14 +70,19 @@ export class FactoryProdOutputsDetailView implements OnInit{
     this.overview.emit(false);
   }
 
+  calculateNewTotal() {
+    event.preventDefault()  
+    this.piecesSubstraction = this.selectedPiecesNo - this.selectedPiecesOutNo
+  }
+
   updateRecord() {
     event.preventDefault()  
-    const piecesSubstraction = this.selectedPiecesNo - this.selectedPiecesOutNo
+    this.calculateNewTotal();
     let selectedData = {
       cheeseName: this.selectedCategory,
       cheeseStatus: 'Entrada',
       cheeseAvailability: true,
-      piecesNo: piecesSubstraction,
+      piecesNo: this.piecesSubstraction,
       piecesOutNo: this.selectedPiecesOutNo,
       weight: this.selectedWeight,
       currentWeight: 0,
